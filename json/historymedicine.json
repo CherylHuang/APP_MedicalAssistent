@@ -1,0 +1,46 @@
+{
+
+    
+  "gender": "NA",
+  "name416": {
+    "time830":{
+      "m1":"感冒糖漿",
+      "m2":"頭痛藥丸"
+    }, 
+    "time1230":{
+      "m1":"感冒糖漿"
+    },
+    "time2000":{
+      "m1":"感冒糖漿",
+      "m2":"頭痛藥丸"
+    }
+  },
+
+  "name417": {
+    "time830":{
+      "m1":"感冒糖漿",
+      "m2":"B群"
+    },  
+    "time2030":{
+      "m1":"感冒糖漿",
+      "m2":"頭痛藥丸"
+    }
+  },
+
+  "location": {
+    "street": "He-Ping East Road, Section 2, No. 138",
+    "city": "Taipei",
+    "state": "NA",
+    "postcode": 106
+  },
+  "medicine": "3",
+    
+  "alarm":2,
+  "password": "OFF",  
+  "email": "dtd@tea.ntue.edu.tw",
+  "login": {
+    "username": "NTUEDTD",
+  },
+  "dob": "2006-08-01 01:00:00",
+"image": "./asset.icon_alarm.png",
+};

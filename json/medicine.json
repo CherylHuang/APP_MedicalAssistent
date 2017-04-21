@@ -1,0 +1,92 @@
+[
+   {
+      "title": "感冒藥",
+      "effect": "咳嗽 流鼻水",
+      "sub-effect": "嗜睡",
+      "color": "#ff0000", //red
+      "image": "http://img01.ibnlive.in/ibnlive/uploads/875x584/jpg/2016/12/medicines1.jpg",
+      "icon": "https://cdn0.iconfinder.com/data/icons/medical-healthcare-13/24/pill_medicine_drug_pharmacy_2-128.png",
+      "warn": "不可連同柑橘類服用",
+      "reason":""
+   },
+   {
+      "title": "退燒藥",
+      "effect": "發燒 止痛",
+      "sub-effect": "嗜睡",
+      "color": "#ffae00", //orange
+      "image": "http://www.urbansamurai.com/wp-content/uploads/2012/03/medicine_pills.jpg",
+      "icon": "https://cdn0.iconfinder.com/data/icons/medical-healthcare-13/24/pill_medicine_drug_pharmacy_2-128.png",
+      "warn": "",
+      "reason":""
+   },
+   {
+      "title": "貼布",
+      "effect": "痠痛",
+      "sub-effect": "",
+      "color": "#1cad00", //green
+      "image": "https://www.cosmed.com.tw/_Files/OwnProduct/%E5%BA%B7%E9%81%A9%E8%B2%BC%E4%B8%80%E6%A2%9D%E6%A0%B9%E8%88%92%E9%81%A9%E8%B2%BC%E5%B8%83%205%E7%89%87%E5%8C%85%E8%A3%9D-1.png",
+      "icon": "https://cdn0.iconfinder.com/data/icons/medical-healthcare-13/24/hospital_sigh_symbol_mark_3-128.png",
+      "warn": "勿過度用力拔起",
+      "reason":"紅腫"
+   },
+   {
+      "title": "眼藥",
+      "effect": "紅眼 細菌感染",
+      "sub-effect": "過敏",
+      "color": "#1885ff", //blue
+      "image": "http://www.watsons.com.hk/medias/sys_master/front/prd/8799320604702.jpg",
+      "icon": "https://cdn0.iconfinder.com/data/icons/medical-healthcare-13/24/blood_type_target-128.png",
+      "warn": "",
+      "reason":"結膜炎"
+    },
+   {
+      "title": "胃藥",
+      "effect": "胃食道逆流",
+      "sub-effect": "",
+      "color": "#8d00de", //purple
+      "image": "http://www.healthline.com/hlcmsresource/images/slideshow/adhd-medication-for-children/285x285_ADHD_Medication_For_Children_2.jpg",
+      "icon": "https://cdn0.iconfinder.com/data/icons/medical-healthcare-13/24/pill_medicine_drug_pharmacy_2-128.png",
+      "warn": "腹脹",
+      "reason":"胃食道逆流"
+    },
+   {
+      "title": "止痛藥",
+      "effect": "止痛",
+      "sub-effect": "",
+      "color":"#ffae00",
+      "image": "https://img.thaibuffer.com/u/patcharin/Health/Medicine/paracetamol_1.jpg",
+      "icon": "https://cdn0.iconfinder.com/data/icons/medical-healthcare-13/24/pill_medicine_drug_pharmacy_2-128.png",
+      "warn": "",
+      "reason":"經痛"
+    },
+   {
+      "title": "聰明藥",
+      "effect": "變聰明",
+      "sub-effect": "",
+      "color":"#b3b3b3", //gray
+      "image": "https://cdn0.iconfinder.com/data/icons/medical-healthcare-13/24/pill_medicine_drug_pharmacy_2-128.png",
+      "icon": "https://cdn0.iconfinder.com/data/icons/medical-healthcare-13/24/pill_medicine_drug_pharmacy_2-128.png",
+      "warn": "",
+      "reason":""
+    },
+   {
+      "title": "超聰明藥",
+      "effect": "變超聰明",
+      "sub-effect": "",
+      "color":"#b3b3b3",
+      "image": "https://cdn0.iconfinder.com/data/icons/medical-healthcare-13/24/pill_medicine_drug_pharmacy-128.png",
+      "icon": "https://cdn0.iconfinder.com/data/icons/medical-healthcare-13/24/pill_medicine_drug_pharmacy-128.png",
+      "warn": "",
+      "reason":""
+    },
+   {
+      "title": "超超聰明藥",
+      "effect": "變超超聰明",
+      "sub-effect": "太聰明",
+      "color":"#b3b3b3",
+      "image": "https://cdn0.iconfinder.com/data/icons/medical-healthcare-13/24/syrige_injection_medicine_antidote-128.png",
+      "icon": "https://cdn0.iconfinder.com/data/icons/medical-healthcare-13/24/syrige_injection_medicine_antidote-128.png",
+      "warn": "",
+      "reason":""
+    }
+]
