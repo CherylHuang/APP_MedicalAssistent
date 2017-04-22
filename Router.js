@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { TabNavigator, StackNavigator, View } from 'react-navigation';
-import { Icon, Button, Avatar } from 'react-native-elements';
-import { Linking, ScrollView, SegmentedControlIOS } from 'react-native';
+import { Icon, Avatar } from 'react-native-elements';
+import { Linking, ScrollView, Button, SegmentedControlIOS } from 'react-native';
 
 import Medicine from './pages/Medicine';
 import Details from './pages/Details';
@@ -10,6 +10,8 @@ import History from './pages/History';
 import Account from './pages/Account';
 import ChangeAccount from './pages/ChangeAccount';
 import Remind from './pages/Remind';
+
+import DeleteAddIcon from './components/delete_add';
 
 
 export const AccountStack = StackNavigator({
@@ -44,18 +46,11 @@ export const AccountStack = StackNavigator({
   ChangeAccount: {
     screen: ChangeAccount,
     navigationOptions: {
-      header: () => ({
+      header: ({navigate}) => ({
         title:'變更用戶',
         right:(
-          <Icon
-          name='date-range'
-          color = "#888888"
-          containerStyle={{marginRight: 7,marginTop:8}}
-          size={30}
-          //onPress
-          />
+          <DeleteAddIcon />
         )
-        
       })
     },
   },
@@ -65,7 +60,7 @@ export const AccountStack = StackNavigator({
   ChangeAccount: {
     screen: ChangeAccount,
     navigationOptions: {
-      header: () => ({
+      header: ({navigate}) => ({
         title: '變更用戶',
       })
     },
@@ -80,21 +75,10 @@ export const MedicineStack = StackNavigator({
   Medicine: {
     screen: Medicine,
     navigationOptions: {
-      header: () => ({
+      header: ({navigate}) => ({
         title: '藥物管理',
         right:(
-          <Button
-          buttonStyle={{
-            margin:0,padding:10,
-          }}
-          iconRight
-          icon={{
-            name: 'add', color:"black",
-            size:25,
-          }}
-          backgroundColor='rgba(0,0,0,0)'
-          underlayColor='rgba(0,0,0,0.2)'
-          />
+          <DeleteAddIcon />
         ),
         left:(
           <Avatar
@@ -102,7 +86,7 @@ export const MedicineStack = StackNavigator({
           rounded
           source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
           containerStyle={{marginLeft: 8,marginBottom:10}}
-          //onPress={() => navigate('ChangeAccount')}
+          onPress={() => navigate('Account')}
           
          />
         ),
@@ -119,21 +103,10 @@ export const RemindStack = StackNavigator({
   Remind: {
     screen: Remind,
     navigationOptions: {
-      header: () => ({
+      header: ({navigate}) => ({
         title: '服藥提醒',
         right:(
-          <Button
-          buttonStyle={{
-            margin:0,padding:10,
-          }}
-          iconRight
-          icon={{
-            name: 'add', color:"black",
-            size:25,
-          }}
-          backgroundColor='rgba(0,0,0,0)'
-          underlayColor='rgba(0,0,0,0.2)'
-          />
+          <DeleteAddIcon />
         ),
         left:(
           <Avatar
@@ -141,7 +114,7 @@ export const RemindStack = StackNavigator({
           rounded
           source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
           containerStyle={{marginLeft: 8,marginBottom:10}}
-          //onPress={() => navigate('ChangeAccount')}
+          onPress={() => navigate('Account')}
           
          />
         ),
@@ -157,7 +130,7 @@ export const TodayStack = StackNavigator({
   Today: {
     screen: Today,
     navigationOptions: {
-      header: () => ({
+      header: ({navigate}) => ({
         title: '今日藥物',
         left:(
           <Avatar
@@ -165,9 +138,7 @@ export const TodayStack = StackNavigator({
           rounded
           source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
           containerStyle={{marginLeft: 8,marginBottom:10}}
-
-  
-          //onPress={() => navigate('ChangeAccount')}
+          onPress={() => navigate('Account')}
           
          />
         ),
@@ -184,7 +155,7 @@ export const HistoryStack = StackNavigator({
   Setting: {
     screen: History,
     navigationOptions: {
-      header: () => ({
+      header: ({navigate}) => ({
         title: '歷史紀錄',
         left:(
           <Avatar
@@ -192,9 +163,7 @@ export const HistoryStack = StackNavigator({
           rounded
           source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
           containerStyle={{marginLeft: 8,marginBottom:10}}
-
-  
-          //onPress={() => navigate('ChangeAccount')}
+          onPress={() => navigate('Account')}
           
          />
         ),
