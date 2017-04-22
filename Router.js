@@ -173,7 +173,7 @@ export const HistoryStack = StackNavigator({
           name='date-range'
           color = "#888888"
           size={30} containerStyle={{marginRight:5}}
-          onPress={() => {}}
+          onPress={() => navigate('Account')}
           />
         ),
       })
