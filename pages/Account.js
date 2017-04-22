@@ -14,17 +14,18 @@ class Account extends Component {
   
 
   render() {
-    
+        const { avatar } = styles;
     return (
       <View >
+          <View style={avatar}>
+            <Avatar
+              xlarge
+              rounded
+              source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
 
-        <Avatar
-          xlarge
-          rounded
-          source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
-
-          containerStyle={{flex: 5,marginLeft: 90, marginTop: 27,marginBottom:137}}
-        />
+              containerStyle={{flex: 1}}
+            />
+          </View>
 
         <List >
        
@@ -64,8 +65,10 @@ class Account extends Component {
     );
   }
 }
-styles = {
-
+const styles = {
+    avatar:{
+      flex:5
+    }
   
 
 }
