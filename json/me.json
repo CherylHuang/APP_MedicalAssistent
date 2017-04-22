@@ -1,27 +1,9 @@
-{
-  "gender": "NA",
-  "name": {
-    "first": "NTUE",
-    "last": "DTD"
-  },
-  "location": {
-    "street": "He-Ping East Road, Section 2, No. 138",
-    "city": "Taipei",
-    "state": "NA",
-    "postcode": 106
-  },
-  "medicine": "3",
-    
-  "alarm":2,
-  "password": "OFF",  
-  "email": "dtd@tea.ntue.edu.tw",
-  "login": {
-    "username": "NTUEDTD"
-  },
-  "dob": "2006-08-01 01:00:00",
-"image": "./asset.icon_alarm.png",
+ {
+      "name":"我",
+      "img":"https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg",
+      "medicine": "3",
+      "alarm":2,
+      "password": "OFF"
+ }
 
-
-
-};
 
