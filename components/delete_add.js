@@ -8,17 +8,14 @@ render(){
         const { right, icon } = styles;
 return (
     <View style={[right]}>
-          <View style={icon}>
-            <Icon name='delete' size={30}
+            <Icon name='delete' size={30} color="#888888"
+             containerStyle={{marginRight:5}}
             onPress={() => {}} 
             />
-          </View>
-
-          <View style={icon}>
-            <Icon name='add' size={30}
+            <Icon name='add' size={30} color="#888888"
+             containerStyle={{marginRight:5}}
             onPress={() => {}}
             />
-          </View>
     </View>
 );}
 
@@ -27,9 +24,6 @@ return (
 const styles = {
     right: {
         flexDirection:'row'
-    },
-    icon:{
-        marginRight:5
     }
 };
 
