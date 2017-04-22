@@ -4,13 +4,13 @@ import { Icon, Button, Avatar } from 'react-native-elements';
 import { Linking, ScrollView, SegmentedControlIOS } from 'react-native';
 
 // import Medicine from './components/ChangeAccount';
-import Medicine from './components/Medicine';
-import Details from './components/Details';
-import Today from './components/Today';
-import History from './components/History';
-import Account from './components/Account';
-import Remind from './components/Remind';
-import ChangeAccount from './components/ChangeAccount';
+import Medicine from './pages/Medicine';
+import Details from './pages/Details';
+import Today from './pages/Today';
+import History from './pages/History';
+import Account from './pages/Account';
+import Remind from './pages/Remind';
+import ChangeAccount from './pages/ChangeAccount';
 
 
 export const AccountStack = StackNavigator({
