@@ -3,27 +3,25 @@ import { TabNavigator, StackNavigator, View } from 'react-navigation';
 import { Icon, Button, Avatar } from 'react-native-elements';
 import { Linking, ScrollView, SegmentedControlIOS } from 'react-native';
 
-// import Medicine from './components/ChangeAccount';
 import Medicine from './pages/Medicine';
 import Details from './pages/Details';
 import Today from './pages/Today';
 import History from './pages/History';
 import Account from './pages/Account';
-import Remind from './pages/Remind';
 import ChangeAccount from './pages/ChangeAccount';
+import Remind from './pages/Remind';
 
 
 export const AccountStack = StackNavigator({
   Account: {
     screen: Account,
     navigationOptions: {
-      header: () => ({
+      header: ({navigate}) => ({
        left:(
           <Button
           title='變更用戶'
-          //onPress={() => navigate('ChangeAccount')}
           color = "#888888"
-         //onPress={() => this.goToPageTwo(account)}
+          onPress={() => navigate('ChangeAccount')}
           />
         ),
         right:(
