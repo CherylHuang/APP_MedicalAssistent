@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { ScrollView,Text,Button } from 'react-native';
-import { List, ListItem,Card, } from 'react-native-elements';
+import { ScrollView,Text,Button, View, SegmentedControlIOS } from 'react-native';
+import { List, ListItem,Card, Icon } from 'react-native-elements';
 
 import medicine from '../json/historymedicine.json';
 
@@ -14,21 +14,22 @@ class History extends Component {
   
 
   render() {
-    
+  const { container, direction, text, seg, icon } = styles;
   return (
-      <ScrollView>
-        <Button
-        title='全部 '
-        large
-        iconRight
-        icon={{name:'arrow-drop-down'}}
-        color='black'
-        style={{marginTop: 5,flex:1,flexDirection:'column',justifyContent:'flex-start'}}
-        fontSize= "10"  //好像沒用
-          
-          />
-      
-          
+    <View>
+          <View style={[container, direction]}>
+              <View style={[direction, icon]}>
+                <Text style={text}>全部</Text>
+                <Icon name='arrow-drop-down' />
+              </View>
+              <View style={[seg]}>
+                <SegmentedControlIOS values={['日期', '名稱']}  selectedIndex={0}
+                marginBottom={5} marginTop={5} marginRight={5}
+                width={100}
+                />
+              </View>
+          </View>
+      <ScrollView>          
       
         <Card title='4/16(日)'containerStyle={{borderRadius:10}}>
          <Card title='8:30'containerStyle={{margin: 0,borderWidth:0}} >
@@ -84,7 +85,30 @@ class History extends Component {
           />
         </List>*/}
       </ScrollView>
+    </View>
   );
 };
 }
+
+const styles = {
+    direction:{
+      flexDirection:'row'
+    },
+    container:{
+      backgroundColor:'rgba(0,0,0,0)'
+    },
+    text:{
+      fontSize:15,
+      paddingLeft:10
+    },
+    seg:{
+      flexDirection:'column',
+      alignSelf:'center'
+    },
+    icon:{
+      flex:1,
+      alignItems:'center'
+    }
+};
+
 export default History;

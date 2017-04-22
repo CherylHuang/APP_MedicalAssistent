@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { ScrollView,View,Image } from 'react-native';
-import { Tile, List, ListItem,Avatar,Icon } from 'react-native-elements';
+import { View, Image, Text } from 'react-native';
+import { List, ListItem, Icon } from 'react-native-elements';
 
 import me from '../json/me.json';
 
@@ -11,27 +11,23 @@ class Account extends Component {
   componentWillMount() {
     this.setState({ me });
   }
-  
 
   render() {
-        const { avatar } = styles;
+        const { img, name } = styles;
     return (
-      <View >
-          <View style={avatar}>
-            <Avatar
-              xlarge
-              rounded
-              source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
-
-              containerStyle={{flex: 1}}
+      <View>
+          <View>
+            <Image source={{uri: this.state.me.img}} 
+            style={img}
             />
+            <Text style={name}>{this.state.me.name}</Text>
           </View>
 
         <List >
-       
           <ListItem
             //imageSrc={require('../assets/icon_alarm.png')}
             //leftIcon={require('../assets/icon_alarm.png')}
+            key={this.state.me.name}
             title="藥物數量"
             titleStyle={{fontSize:20}}
             rightTitle={this.state.me.medicine}
@@ -41,6 +37,7 @@ class Account extends Component {
             hideChevron
           />
           <ListItem
+            key={this.state.me.alarm}
             title="鬧鐘數量"
             titleStyle={{fontSize:20}}
             rightTitle={this.state.me.alarm}
@@ -49,6 +46,7 @@ class Account extends Component {
             hideChevron
           />
           <ListItem
+            key={this.state.me.password}
             title="密碼"
             titleStyle={{fontSize:20}}
             rightTitle={this.state.me.password}
@@ -56,21 +54,26 @@ class Account extends Component {
             leftIcon={{name: 'lock',size:15,color:'#517fa4'}}
             hideChevron
           />
-
-         
+    
         </List>
-
        
       </View>
     );
   }
 }
 const styles = {
-    avatar:{
-      flex:5
-    }
-  
-
+  img:{
+    alignSelf:'center',
+    width:150,
+    height:150,
+    borderRadius:75,
+    marginTop:30
+  },
+  name:{
+    alignSelf:'center',
+    fontSize:20,
+    paddingTop:15
+  }
 }
 
 export default Account;

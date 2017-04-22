@@ -56,7 +56,6 @@ handlePressCheckedBox = (checked) => {
             <View style={[list, directionRow, alignItemCenter]} >
                 <View style={[checkbox]}>
                     <CheckBox
-                    key={'checkBox'}
                     size={30}
                     checked={this.state.isChecked}
                     onPress={this.handlePressCheckedBox}
