@@ -10,9 +10,18 @@
     "state": "NA",
     "postcode": 106
   },
+  "medicine": "3",
+    
+  "alarm":2,
+  "password": "OFF",  
   "email": "dtd@tea.ntue.edu.tw",
   "login": {
-    "username": "NTUEDTD",
+    "username": "NTUEDTD"
   },
   "dob": "2006-08-01 01:00:00",
+"image": "./asset.icon_alarm.png",
+
+
+
 };
+
