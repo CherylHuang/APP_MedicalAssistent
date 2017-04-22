@@ -172,9 +172,8 @@ export const HistoryStack = StackNavigator({
           <Icon
           name='date-range'
           color = "#888888"
-          containerStyle={{marginRight: 7,marginTop:8}}
-          size={30}
-          //onPress
+          size={30} containerStyle={{marginRight:5}}
+          onPress={() => {}}
           />
         ),
       })
