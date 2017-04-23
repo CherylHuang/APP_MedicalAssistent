@@ -4,7 +4,6 @@ import { Icon, Avatar } from 'react-native-elements';
 import { Linking, ScrollView, Button, SegmentedControlIOS } from 'react-native';
 
 import Medicine from './pages/Medicine';
-import Details from './pages/Details';
 import Today from './pages/Today';
 import History from './pages/History';
 import Account from './pages/Account';
