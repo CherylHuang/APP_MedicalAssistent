@@ -10,6 +10,7 @@ import Account from './pages/Account';
 import ChangeAccount from './pages/ChangeAccount';
 import Remind from './pages/Remind';
 import MedicineDetails from './pages/MedicineDetails';
+import ClockDetails from './pages/ClockDetails';
 
 import DeleteAddIcon from './components/delete_add';
 
@@ -121,6 +122,19 @@ export const RemindStack = StackNavigator({
           onPress={() => navigate('Account')}
           
          />
+        ),
+      })
+    },
+  },
+  ClockDetails: {
+    screen: ClockDetails,
+    navigationOptions: {
+      header: ({ state }) => ({
+        right:(
+          <Button
+          title='編輯'
+          color = "#888888"
+          />
         ),
       })
     },
