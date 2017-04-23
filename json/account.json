@@ -3,21 +3,18 @@
       "name": "我",
       "medicine": 3,
       "alarm":1,
-      "password": "OFF",
       "image": "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"
    },
    {
       "name": "爸爸",
       "medicine": 4,
       "alarm":2,
-      "password": "OFF",
       "image": "https://pbs.twimg.com/profile_images/378800000823347939/036f78135425d19367fcbb76ef58e86d_400x400.jpeg"
    },
    {
       "name": "奶奶",
       "medicine": 6,
       "alarm":8,
-      "password": "ON",
       "image": "http://img003.21cnimg.com/photos/album/20140308/m600/66ED8C71D0DD6E21EC52E9EAAF893CBF.jpg"
    }
 ]
