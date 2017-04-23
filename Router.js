@@ -10,6 +10,7 @@ import History from './pages/History';
 import Account from './pages/Account';
 import ChangeAccount from './pages/ChangeAccount';
 import Remind from './pages/Remind';
+import MedicineDetails from './pages/MedicineDetails';
 
 import DeleteAddIcon from './components/delete_add';
 
@@ -21,7 +22,7 @@ export const AccountStack = StackNavigator({
       header: ({navigate}) => ({
        left:(
           <Button
-          title='變更用戶'
+          title='變更成員'
           color = "#888888"
           onPress={() => navigate('ChangeAccount')}
           />
@@ -35,19 +36,11 @@ export const AccountStack = StackNavigator({
       })
     },
   },
-  Details: {
-    screen: Details,
-    navigationOptions: {
-      header: ({ state }) => ({
-        title: `${state.params.title.toUpperCase()}`,
-      })
-    },
-  },
   ChangeAccount: {
     screen: ChangeAccount,
     navigationOptions: {
       header: ({navigate}) => ({
-        title:'變更用戶',
+        title:'變更成員',
         right:(
           <DeleteAddIcon />
         )
@@ -61,7 +54,7 @@ export const AccountStack = StackNavigator({
     screen: ChangeAccount,
     navigationOptions: {
       header: ({navigate}) => ({
-        title: '變更用戶',
+        title: '變更成員',
       })
     },
   },
@@ -87,8 +80,20 @@ export const MedicineStack = StackNavigator({
           source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
           containerStyle={{marginLeft: 8,marginBottom:10}}
           onPress={() => navigate('Account')}
-          
          />
+        ),
+      })
+    },
+  },
+  MedicineDetails: {
+    screen: MedicineDetails,
+    navigationOptions: {
+      header: ({ state }) => ({
+        right:(
+          <Button
+          title='編輯'
+          color = "#888888"
+          />
         ),
       })
     },
@@ -187,7 +192,7 @@ export const TabRouter = TabNavigator(
       screen: AccountStack,
       navigationOptions: {
         tabBar: {
-          label: '用戶管理',
+          label: '成員管理',
           icon: ({ tintColor }) => <Icon name="person" size={30} color={tintColor} />
         },
       },
