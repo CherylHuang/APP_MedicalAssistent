@@ -39,8 +39,8 @@
   "password": "OFF",  
   "email": "dtd@tea.ntue.edu.tw",
   "login": {
-    "username": "NTUEDTD",
+    "username": "NTUEDTD"
   },
   "dob": "2006-08-01 01:00:00",
-"image": "./asset.icon_alarm.png",
-};
+"image": "./asset.icon_alarm.png"
+}

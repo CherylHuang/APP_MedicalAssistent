@@ -2,7 +2,7 @@
       "name":"我",
       "img":"https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg",
       "medicine": "3",
-      "alarm":2,
+      "alarm":"2",
       "password": "OFF"
  }
 
