@@ -13,8 +13,8 @@ class Reminder extends Component {
     this.setState({ clock });
   }
 
-  goToPageTwo = (medi) => {
-    this.props.navigation.navigate('Details', { ...medi });
+  goToPageTwo = (ck) => {
+    this.props.navigation.navigate('ClockDetails', { ...ck });
   };
 
 //checkbox
@@ -30,12 +30,6 @@ handlePressCheckedBox = (checked) => {
     });
 }
 
-//RepeatDayStyle
-// repeatDayStyle = ()=>{
-//     this.setState({
-//       style: 
-//     });
-// }
 
   render() {
      const { checkbox, directionRow, clockContain, clockbox,
@@ -61,16 +55,17 @@ handlePressCheckedBox = (checked) => {
                     onPress={this.handlePressCheckedBox}
                     />
                 </View>
-                <View style={[clockContain, directionRow, alignItemCenter]}
-                onPress={() => console.log('pressed')}
-                >
 
-                  <View style={[clockbox, directionRow, alignItemCenter]}>
-                    <Text style={[AM_PM_text]}>
-                      {ck.AMorPM}</Text>
-                    <Text style={[time]}>
-                      {ck.timeHour}:{ck.timeMinute}</Text>
-                  </View>
+                  <View style={[clockContain, directionRow, alignItemCenter]}
+                  onTouchMove={() => this.goToPageTwo(ck)}>
+
+                    <View style={[clockbox, directionRow, alignItemCenter]}
+                    >
+                      <Text style={[AM_PM_text]}>
+                        {ck.AMorPM}</Text>
+                      <Text style={[time]}>
+                        {ck.timeHour}:{ck.timeMinute}</Text>
+                    </View>
                     <View style={[info]}>
                       <Text style={medi}>
                         {ck.medicine} / {ck.amount}{ck.amountWord}</Text>
@@ -81,8 +76,8 @@ handlePressCheckedBox = (checked) => {
                     </View>
 
                 </View>
-                
-            </View>
+
+          </View>
           ))}
         </List>
      </ScrollView>
