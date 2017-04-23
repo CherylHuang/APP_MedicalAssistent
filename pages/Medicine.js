@@ -46,11 +46,11 @@ class Medicine extends Component {
                 }}
               title={medi.title}
               titleStyle={{
-                fontSize:20, color:[medi.color],
+                fontSize:23, color:[medi.color],
                 paddingBottom:5
                 }}
               subtitle={medi.effect}
-              subtitleStyle={{fontSize:15}}
+              subtitleStyle={{fontSize:17}}
               onPress={() => this.goToPageTwo(medi)}
             />
           ))}

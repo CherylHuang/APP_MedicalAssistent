@@ -57,10 +57,9 @@ handlePressCheckedBox = (checked) => {
                 </View>
 
                   <View style={[clockContain, directionRow, alignItemCenter]}
-                  onTouchMove={() => this.goToPageTwo(ck)}>
+                  onTouchEnd={() => this.goToPageTwo(ck)}>
 
-                    <View style={[clockbox, directionRow, alignItemCenter]}
-                    >
+                    <View style={[clockbox, directionRow, alignItemCenter]}>
                       <Text style={[AM_PM_text]}>
                         {ck.AMorPM}</Text>
                       <Text style={[time]}>
