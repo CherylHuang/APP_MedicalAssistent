@@ -11,6 +11,8 @@
             "school":"true",
             "work":"true"
         },
+        "subeffect":"嗜睡",
+        "img":"http://img01.ibnlive.in/ibnlive/uploads/875x584/jpg/2016/12/medicines1.jpg",
         "SUN":"false",
         "MON":"false",
         "TUE":"false",
@@ -32,6 +34,8 @@
             "school":"true",
             "work":"true"
         },
+        "subeffect":"過敏",
+        "img":"http://www.watsons.com.hk/medias/sys_master/front/prd/8799320604702.jpg",
         "SUN":"false",
         "MON":"true",
         "TUE":"true",
@@ -53,6 +57,8 @@
             "school":"true",
             "work":"true"
         },
+        "subeffect":"無",
+        "img":"http://www.healthline.com/hlcmsresource/images/slideshow/adhd-medication-for-children/285x285_ADHD_Medication_For_Children_2.jpg",
         "SUN":"true",
         "MON":"false",
         "TUE":"false",
