@@ -13,7 +13,7 @@ class Medicine extends Component {
   }
 
   goToPageTwo = (medi) => {
-    this.props.navigation.navigate('Details', { ...medi });
+    this.props.navigation.navigate('MedicineDetails', { ...medi });
   };
 
   render() {

@@ -23,7 +23,7 @@ class Account extends Component {
             <Text style={name}>{this.state.me.name}</Text>
           </View>
 
-        <List >
+        <List>
           <ListItem
             //imageSrc={require('../assets/icon_alarm.png')}
             //leftIcon={require('../assets/icon_alarm.png')}
