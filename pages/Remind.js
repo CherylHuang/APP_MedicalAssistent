@@ -41,7 +41,7 @@ handlePressCheckedBox = (checked) => {
         <View style={{backgroundColor:"white"}}>
           <SegmentedControlIOS values={['鬧鐘', '時刻表']} 
           selectedIndex={0} marginTop={5} marginBottom={5}
-          marginLeft={30} marginRight={30}
+          marginLeft={30} marginRight={30} tintColor="#517fa4"
           />
         </View>
       <ScrollView>
@@ -52,6 +52,7 @@ handlePressCheckedBox = (checked) => {
                     <CheckBox
                     size={30}
                     checked={this.state.isChecked}
+                    color='#517fa4'
                     onPress={this.handlePressCheckedBox}
                     />
                 </View>
@@ -117,7 +118,8 @@ const styles = {
     padding:10,
     marginLeft:-20,
     marginRight:5,
-    backgroundColor: '#d4d4d4'
+    backgroundColor: '#d4d4d4',
+    borderRadius:5
   },
   info:{
     flex:1.5

@@ -23,10 +23,10 @@ class Medicine extends Component {
           <View style={[container, direction]}>
               <View style={[direction, icon]}>
                 <Text style={text}>全部</Text>
-                <Icon name='arrow-drop-down' />
+                <Icon name='arrow-drop-down' color='#517fa4' />
               </View>
               <View style={[seg]}>
-                <SegmentedControlIOS values={['日期', '名稱']}  selectedIndex={0}
+                <SegmentedControlIOS tintColor="#517fa4" values={['日期', '名稱']}  selectedIndex={0}
                 marginBottom={5} marginTop={5} marginRight={5}
                 width={100}
                 />
@@ -41,12 +41,10 @@ class Medicine extends Component {
               avatar={{ uri: medi.image }}
               avatarStyle={{
                 width:100, height:100,
-                borderColor:[medi.color],
-                borderWidth:2
                 }}
               title={medi.title}
               titleStyle={{
-                fontSize:23, color:[medi.color],
+                fontSize:23,
                 paddingBottom:5
                 }}
               subtitle={medi.effect}
@@ -70,7 +68,8 @@ const styles = {
     },
     text:{
       fontSize:15,
-      paddingLeft:10
+      paddingLeft:10,
+      color:'#517fa4'
     },
     seg:{
       flexDirection:'column',

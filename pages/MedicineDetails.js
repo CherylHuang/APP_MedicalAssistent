@@ -24,7 +24,7 @@ const MedicineDetails = (props) => {
 
           <View>
             <Image source={{uri: image}} style={[img]} />
-            <Text style={[name, {color:color}]}>{title}</Text>
+            <Text style={[name]}>{title}</Text>
           </View>
 
         <List>

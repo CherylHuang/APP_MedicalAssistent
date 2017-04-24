@@ -39,7 +39,7 @@ handlePressCheckedBox = (checked) => {
          <View style={[checkbox]}>
                 <CheckBox
                 label={this.state.medicine.name417.time830.m1}
-                size={30}
+                size={30} color='#517fa4'
                 checked={this.state.isChecked}
                 onPress={this.handlePressCheckedBox}
                 />
@@ -47,7 +47,7 @@ handlePressCheckedBox = (checked) => {
         <View style={[checkbox]}>
                 <CheckBox
                 label={this.state.medicine.name417.time830.m2}
-                size={30}
+                size={30} color='#517fa4'
                 checked={this.state.isChecked}
                 onPress={this.handlePressCheckedBox}
                 />
@@ -58,7 +58,7 @@ handlePressCheckedBox = (checked) => {
             <View style={[checkbox]}>
                 <CheckBox
                 label={this.state.medicine.name417.time2030.m1}
-                size={30}
+                size={30} color='#517fa4'
                 checked={this.state.isChecked}
                 onPress={this.handlePressCheckedBox}
                 />

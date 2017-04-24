@@ -20,11 +20,11 @@ class History extends Component {
           <View style={[container, direction]}>
               <View style={[direction, icon]}>
                 <Text style={text}>全部</Text>
-                <Icon name='arrow-drop-down' />
+                <Icon name='arrow-drop-down' color='#517fa4' />
               </View>
               <View style={[seg]}>
                 <SegmentedControlIOS values={['日期', '名稱']}  selectedIndex={0}
-                marginBottom={5} marginTop={5} marginRight={5}
+                marginBottom={5} marginTop={5} marginRight={5} tintColor="#517fa4"
                 width={100}
                 />
               </View>
@@ -99,7 +99,8 @@ const styles = {
     },
     text:{
       fontSize:15,
-      paddingLeft:10
+      paddingLeft:10,
+      color:'#517fa4'
     },
     seg:{
       flexDirection:'column',

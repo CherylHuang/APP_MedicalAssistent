@@ -9,12 +9,18 @@ const ClockDetails = (props) => {
           timeMinute,
           sound,
           form,
+          open,
+          delay,
           medicine,
           amount,
           amountWord,
-          color,
           img,
-          subeffect
+          subeffect,
+          medicine2,
+          amount2,
+          amountWord2,
+          img2,
+          subeffect2
   } = props.navigation.state.params;
 
     const { icon, AMPM, time, contain, directionRow, directionCol } = styles;
@@ -23,10 +29,10 @@ const ClockDetails = (props) => {
       <ScrollView>
         <View style={directionCol}>
           <View style={[directionRow, contain]}>
-            <Icon name='alarm' size={65} color={color}
-                  containerStyle={{paddingRight:5}}/>
-            <Text style={[AMPM, {color:color}]}>{AMorPM}</Text>
-            <Text style={[time, {color:color}]}>{timeHour}:{timeMinute}</Text>
+            <Icon name='alarm' size={75} color={open}
+                  containerStyle={{paddingRight:5, paddingTop:10}}/>
+            <Text style={[AMPM, {color:open}]}>{AMorPM}</Text>
+            <Text style={[time, {color:open}]}>{timeHour}:{timeMinute}</Text>
           </View>
         </View>
         <List>
@@ -55,10 +61,19 @@ const ClockDetails = (props) => {
               hideChevron
             />
             <ListItem
+              key="delay"
+              title="延後提醒"
+              titleStyle={{fontSize:20}}
+              rightTitle={`${delay}`}
+              rightTitleStyle={{fontSize:17}}
+              hideChevron
+            />
+            <ListItem
               key="medicine/number"
               title="藥品/數量"
               titleStyle={{fontSize:20}}
               hideChevron
+              containerStyle={{borderTopWidth:1, borderColor:'#868686'}}
             />
             <ListItem
               key="medicine"
@@ -68,6 +83,17 @@ const ClockDetails = (props) => {
               title={`${medicine} / ${amount}${amountWord}`}
               titleStyle={{fontSize:20, paddingBottom:3}}
               subtitle={`副作用: ${subeffect}`}
+              subtitleStyle={{fontSize:15}}
+              /*onPress={() => this.goToPageTwo(medi)}*/
+            />
+            <ListItem
+              key="medicine2"
+              roundAvatar
+              avatar={{ uri: img2 }}
+              avatarStyle={{width:55, height:55, marginLeft:30}}
+              title={`${medicine2} / ${amount2}${amountWord2}`}
+              titleStyle={{fontSize:20, paddingBottom:3}}
+              subtitle={`副作用: ${subeffect2}`}
               subtitleStyle={{fontSize:15}}
               /*onPress={() => this.goToPageTwo(medi)}*/
             />
@@ -86,7 +112,8 @@ const styles = {
   },
   contain:{
     flex:1,
-    alignItems:'center'
+    alignItems:'center',
+    marginTop:10
   },
   icon:{
     width:150,
@@ -99,7 +126,7 @@ const styles = {
     paddingTop:15
   },
   time:{
-    fontSize:55,
+    fontSize:50,
     paddingTop:15
   }
 };
