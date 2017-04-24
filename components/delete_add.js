@@ -8,11 +8,11 @@ render(){
         const { right, icon } = styles;
 return (
     <View style={[right]}>
-            <Icon name='delete' size={30} color="#888888"
+            <Icon name='delete' size={30} color="#517fa4"
              containerStyle={{marginRight:5}}
             onPress={() => {}} 
             />
-            <Icon name='add' size={30} color="#888888"
+            <Icon name='add' size={30} color="#517fa4"
              containerStyle={{marginRight:5}}
             onPress={() => {}}
             />
