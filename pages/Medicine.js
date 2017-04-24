@@ -19,7 +19,7 @@ class Medicine extends Component {
   render() {
     const { container, direction, text, seg, icon } = styles;
     return (
-    <View>
+    <View style={{flex:1}}>
           <View style={[container, direction]}>
               <View style={[direction, icon]}>
                 <Text style={text}>全部</Text>
@@ -33,7 +33,7 @@ class Medicine extends Component {
               </View>
           </View>
       <ScrollView>
-        <List containerStyle={{marginTop: 0,paddingBottom: 40}}>
+        <List containerStyle={{marginTop: 0}}>
           {this.state.medicine.map((medi) => (
             <ListItem
               key={medi.title}

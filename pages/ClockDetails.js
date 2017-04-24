@@ -54,7 +54,7 @@ const ClockDetails = (props) => {
             />
             <ListItem
               key="form"
-              title="時刻表"
+              title="加入時刻表"
               titleStyle={{fontSize:20}}
               rightTitle="課表/班表"
               rightTitleStyle={{fontSize:17}}

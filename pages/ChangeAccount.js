@@ -26,6 +26,7 @@ class ChangeAccount extends Component {
               roundAvatar
               avatar={{ uri: account.image }}
               title={account.name}
+              titleStyle={{fontSize:20}}
               onPress={() => this.goToPageTwo(account)}
               // hideChevron
               // rightTitle='More...'
