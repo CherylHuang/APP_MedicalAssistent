@@ -4,15 +4,10 @@
         "timeHour":"11",
         "timeMinute":"00",
         "sound":"治感冒咒",
-        "medicine":"感冒藥",
-        "amount":"2",
-        "amountWord":"顆",
         "form":{
             "school":"true",
             "work":"true"
         },
-        "subeffect":"嗜睡",
-        "img":"http://img01.ibnlive.in/ibnlive/uploads/875x584/jpg/2016/12/medicines1.jpg",
         "SUN":"false",
         "MON":"false",
         "TUE":"false",
@@ -20,20 +15,31 @@
         "THU":"false",
         "FRI":"false",
         "SAT":"false",
-        "color":"#ff0000"
+        "open":"#6eb372", //open
+        "delay":"ON",
+        "medicine":"感冒藥",
+        "amount":"2",
+        "amountWord":"顆",
+        "subeffect":"嗜睡",
+        "img":"http://img01.ibnlive.in/ibnlive/uploads/875x584/jpg/2016/12/medicines1.jpg",
+        "medicine2":"胃藥",
+        "amount2":"1",
+        "amountWord2":"顆",
+        "subeffect2":"無",
+        "img2":"http://www.healthline.com/hlcmsresource/images/slideshow/adhd-medication-for-children/285x285_ADHD_Medication_For_Children_2.jpg"
     },
     {
         "AMorPM":"下午",
         "timeHour":" 2",
         "timeMinute":"00",
         "sound":"預設",
-        "medicine":"眼藥",
-        "amount":"1",
-        "amountWord":"滴",
         "form":{
             "school":"true",
             "work":"true"
         },
+        "medicine":"眼藥",
+        "amount":"1",
+        "amountWord":"滴",
         "subeffect":"過敏",
         "img":"http://www.watsons.com.hk/medias/sys_master/front/prd/8799320604702.jpg",
         "SUN":"false",
@@ -43,20 +49,26 @@
         "THU":"true",
         "FRI":"true",
         "SAT":"false",
-        "color":"#1cad00"
+        "open":"#6eb372", //open
+        "delay":"OFF",
+        "medicine2":"感冒藥",
+        "amount2":"2",
+        "amountWord2":"顆",
+        "subeffect2":"嗜睡",
+        "img2":"http://img01.ibnlive.in/ibnlive/uploads/875x584/jpg/2016/12/medicines1.jpg"
     },
     {
         "AMorPM":"下午",
         "timeHour":" 9",
         "timeMinute":"00",
         "sound":"預設",
-        "medicine":"胃藥",
-        "amount":"1",
-        "amountWord":"顆",
         "form":{
             "school":"true",
             "work":"true"
         },
+        "medicine":"胃藥",
+        "amount":"1",
+        "amountWord":"顆",
         "subeffect":"無",
         "img":"http://www.healthline.com/hlcmsresource/images/slideshow/adhd-medication-for-children/285x285_ADHD_Medication_For_Children_2.jpg",
         "SUN":"true",
@@ -66,6 +78,12 @@
         "THU":"false",
         "FRI":"false",
         "SAT":"true",
-        "color":"#b3b3b3"
+        "open":"#868686", //close
+        "delay":"ON",
+        "medicine2":"眼藥",
+        "amount2":"1",
+        "amountWord2":"滴",
+        "subeffect2":"過敏",
+        "img2":"http://www.watsons.com.hk/medias/sys_master/front/prd/8799320604702.jpg"
     }
 ]
