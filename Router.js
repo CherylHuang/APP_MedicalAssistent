@@ -42,6 +42,7 @@ export const AccountStack = StackNavigator(
     navigationOptions: {
       header: ({navigate}) => ({
         title:'變更成員',
+        tintColor:"#517fa4",
         right:(
           <DeleteAddIcon />
         )
@@ -50,28 +51,29 @@ export const AccountStack = StackNavigator(
   },
 }
 );
- export const ChangeAccountStack = StackNavigator({
+//  export const ChangeAccountStack = StackNavigator({
     
-  ChangeAccount: {
-    screen: ChangeAccount,
-    navigationOptions: {
-      header: ({navigate}) => ({
-        title: '變更成員',
-      })
-    },
-  },
+//   ChangeAccount: {
+//     screen: ChangeAccount,
+//     navigationOptions: {
+//       header: ({navigate}) => ({
+//         title: '變更成員',
+//       })
+//     },
+//   },
   
-},
-{
-  // headerMode: 'none',
-}
-);
+// },
+// {
+//   // headerMode: 'none',
+// }
+// );
 export const MedicineStack = StackNavigator({
   Medicine: {
     screen: Medicine,
     navigationOptions: {
       header: ({navigate}) => ({
         title: '藥物管理',
+        
         right:(
           <DeleteAddIcon />
         ),
@@ -91,6 +93,7 @@ export const MedicineStack = StackNavigator({
     screen: MedicineDetails,
     navigationOptions: {
       header: ({ state }) => ({
+        tintColor:"#517fa4",
         right:(
           <Button
           title='編輯'
@@ -111,6 +114,7 @@ export const RemindStack = StackNavigator({
     screen: Remind,
     navigationOptions: {
       header: ({navigate}) => ({
+
         title: '服藥提醒',
         right:(
           <DeleteAddIcon />
@@ -132,6 +136,7 @@ export const RemindStack = StackNavigator({
     screen: ClockDetails,
     navigationOptions: {
       header: ({ state }) => ({
+        tintColor:"#517fa4",
         right:(
           <Button
           title='編輯'
