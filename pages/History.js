@@ -31,7 +31,7 @@ class History extends Component {
           </View>
       <ScrollView>          
       
-        <Card title='4/16(日)'titleStyle={{fontWeight:'light',padding:10,marginBottom:0,backgroundColor:"#517fa4",borderRadius:10,height:38,color:"#ffffff" ,fontSize:22}} containerStyle={{borderRadius:10 ,backgroundColor:"#b9d0e3"}}>
+        <Card title='4/16(日)'titleStyle={{fontWeight:'light',padding:10,marginBottom:0,backgroundColor:"#517fa4",borderRadius:10,height:44,color:"#ffffff" ,fontSize:22}} containerStyle={{borderRadius:10 ,backgroundColor:"#b9d0e3"}}>
          <Card title='8:30' titleStyle={{fontSize:20 }} containerStyle={{margin: 0,borderWidth:0,borderRadius:10}} >
           <ListItem
             title={this.state.medicine.name416.time830.m1}
@@ -66,7 +66,7 @@ class History extends Component {
         </Card>
 
 
-  <Card title='4/17(一)'titleStyle={{fontWeight:'light',padding:10,marginBottom:0,backgroundColor:"#517fa4",borderRadius:10,height:38,color:"#ffffff" ,fontSize:22}} containerStyle={{borderRadius:10,backgroundColor:"#b9d0e3" }}>
+  <Card title='4/17(一)'titleStyle={{fontWeight:'light',padding:10,marginBottom:0,backgroundColor:"#517fa4",borderRadius:10,height:44,color:"#ffffff" ,fontSize:22}} containerStyle={{borderRadius:10,backgroundColor:"#b9d0e3" }}>
         <Card title='8:30' titleStyle={{fontSize:20 }} containerStyle={{margin: 0,borderWidth:0,borderRadius:10}}>
           <ListItem
             title={this.state.medicine.name417.time830.m1}
