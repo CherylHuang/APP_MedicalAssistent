@@ -15,7 +15,8 @@ import ClockDetails from './pages/ClockDetails';
 import DeleteAddIcon from './components/delete_add';
 
 
-export const AccountStack = StackNavigator({
+export const AccountStack = StackNavigator(
+{
   Account: {
     screen: Account,
     navigationOptions: {
@@ -23,18 +24,18 @@ export const AccountStack = StackNavigator({
        left:(
           <Button
           title='變更成員'
-          color = "#888888"
+          color = "#517fa4"
           onPress={() => navigate('ChangeAccount')}
           />
         ),
         right:(
           <Button
           title='編輯'
-          color = "#888888"
+          color = "#517fa4"
           />
         ),
       })
-    },
+    }
   },
   ChangeAccount: {
     screen: ChangeAccount,
@@ -47,7 +48,8 @@ export const AccountStack = StackNavigator({
       })
     },
   },
-});
+}
+);
  export const ChangeAccountStack = StackNavigator({
     
   ChangeAccount: {
@@ -92,7 +94,7 @@ export const MedicineStack = StackNavigator({
         right:(
           <Button
           title='編輯'
-          color = "#888888"
+          color = "#517fa4"
           />
         ),
       })
@@ -133,7 +135,7 @@ export const RemindStack = StackNavigator({
         right:(
           <Button
           title='編輯'
-          color = "#888888"
+          color = "#517fa4"
           />
         ),
       })
@@ -189,7 +191,7 @@ export const HistoryStack = StackNavigator({
        
           <Icon
           name='date-range'
-          color = "#888888"
+          color = "#517fa4"
           size={30} containerStyle={{marginRight:5}}
           onPress={() => {}}
           />
@@ -249,5 +251,9 @@ export const TabRouter = TabNavigator(
   },
   {
     animationEnabled: 'true',
+    tabBarOptions:{
+      activeTintColor:'#ffffff',
+      activeBackgroundColor:'#517fa4'
+    }
   }
 );
