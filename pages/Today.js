@@ -33,7 +33,7 @@ class Today extends Component {
             rightTitle={this.state.me.medicine}
             rightTitleStyle={{fontSize:20}}
             //containerStyle={{flex: 1,height:30}}
-            leftIcon={{name: 'group-work',size:15,color:'#517fa4'}}
+            leftIcon={{name: 'group-work',color:'#517fa4'}}
             hideChevron
           />
           <ListItem
@@ -42,7 +42,7 @@ class Today extends Component {
             titleStyle={{fontSize:20}}
             rightTitle={this.state.me.alarm}
             rightTitleStyle={{fontSize:20}}
-            leftIcon={{name: 'alarm',size:15,color:'#517fa4'}}
+            leftIcon={{name: 'alarm',color:'#517fa4'}}
             hideChevron
           />
           <ListItem
@@ -51,7 +51,7 @@ class Today extends Component {
             titleStyle={{fontSize:20}}
             rightTitle={this.state.me.password}
             rightTitleStyle={{fontSize:20}}
-            leftIcon={{name: 'lock',size:15,color:'#517fa4'}}
+            leftIcon={{name: 'lock',color:'#517fa4'}}
             hideChevron
           />
     
