@@ -22,12 +22,6 @@ class History extends Component {
                 <Text style={text}>全部</Text>
                 <Icon name='arrow-drop-down' color='#517fa4' />
               </View>
-              <View style={[seg]}>
-                <SegmentedControlIOS values={['最新', '最舊']}  selectedIndex={0}
-                marginBottom={5} marginTop={5} marginRight={5} tintColor="#517fa4"
-                width={100}
-                />
-              </View>
           </View>
       <ScrollView>          
       
@@ -116,10 +110,6 @@ const styles = {
       paddingLeft:10,
       color:'#517fa4'
       
-    },
-    seg:{
-      flexDirection:'column',
-      alignSelf:'center'
     },
     icon:{
       flex:1,

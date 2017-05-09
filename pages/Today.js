@@ -1,98 +1,79 @@
 import React, { Component } from 'react';
-import { ScrollView ,Text,Button,StyleSheet,View } from 'react-native';
-import { Tile, List, ListItem,Card } from 'react-native-elements';
-import CheckBox from 'react-native-icon-checkbox';
+import { View, Image, Text } from 'react-native';
+import { List, ListItem, Icon } from 'react-native-elements';
 
-import medicine from '../json/historymedicine.json';
-
+import me from '../json/me.json';
 
 // Make a component
 class Today extends Component {
-  state = { medicine: [] };
+  state = { me: [] };
 
   componentWillMount() {
-    this.setState({ medicine });
+    this.setState({ me });
   }
-
-  //checkbox
-constructor(props) {
-    super(props);
-    this.state = {
-      isChecked: false,
-    };
-  }
-handlePressCheckedBox = (checked) => {
-    this.setState({
-      isChecked: checked,
-    });
-}
 
   render() {
-      const {checkbox, titlestyle, textstyle,textstyle2} = styles;
+        const { img, name } = styles;
     return (
-      <ScrollView>
-        <View style={titlestyle}>   
-        <Text style={textstyle}>4 / 17<Text style={textstyle2}>(一)</Text></Text>
-        </View>
-  <Card containerStyle={{borderRadius:10,backgroundColor:"#b9d0e3" }}>
-        <Card title='8:30' titleStyle={{fontSize:20 }} containerStyle={{margin: 0,borderWidth:0,borderRadius:10}}>
-         
-         <View style={[checkbox]}>
-                <CheckBox
-                label={this.state.medicine.name417.time830.m1}
-                size={30} color='#517fa4'
-                checked={this.state.isChecked}
-                onPress={this.handlePressCheckedBox}
-                labelStyle={{fontSize:20}}
-                />
-        </View>
-        <View style={[checkbox]}>
-                <CheckBox
-                label={this.state.medicine.name417.time830.m2}
-                size={30} color='#517fa4'
-                checked={this.state.isChecked}
-                onPress={this.handlePressCheckedBox}
-                labelStyle={{fontSize:20}}
-                />
-        </View>
+      <View>
+          <View>
+            <Image source={{uri: this.state.me.img}} 
+            style={img}
+            />
+            <Text style={name}>{this.state.me.name}</Text>
+          </View>
 
-          </Card>
-          <Card title='13:00' titleStyle={{fontSize:20 }} containerStyle={{margin: 0,marginTop: 5,borderWidth:0,borderRadius:10}} >
-            <View style={[checkbox]}>
-                <CheckBox
-                label={this.state.medicine.name417.time2030.m1}
-                size={30} color='#517fa4'
-                checked={this.state.isChecked}
-                onPress={this.handlePressCheckedBox}
-                labelStyle={{fontSize:20}}
-                />
-              </View>
-                    
-          </Card>
-        </Card>
-
-      </ScrollView>
+        <List>
+          <ListItem
+            //imageSrc={require('../assets/icon_alarm.png')}
+            //leftIcon={require('../assets/icon_alarm.png')}
+            key={this.state.me.name}
+            title="藥物數量"
+            titleStyle={{fontSize:20}}
+            rightTitle={this.state.me.medicine}
+            rightTitleStyle={{fontSize:20}}
+            //containerStyle={{flex: 1,height:30}}
+            leftIcon={{name: 'group-work',size:15,color:'#517fa4'}}
+            hideChevron
+          />
+          <ListItem
+            key={this.state.me.alarm}
+            title="鬧鐘數量"
+            titleStyle={{fontSize:20}}
+            rightTitle={this.state.me.alarm}
+            rightTitleStyle={{fontSize:20}}
+            leftIcon={{name: 'alarm',size:15,color:'#517fa4'}}
+            hideChevron
+          />
+          <ListItem
+            key={this.state.me.password}
+            title="密碼"
+            titleStyle={{fontSize:20}}
+            rightTitle={this.state.me.password}
+            rightTitleStyle={{fontSize:20}}
+            leftIcon={{name: 'lock',size:15,color:'#517fa4'}}
+            hideChevron
+          />
+    
+        </List>
+       
+      </View>
     );
   }
 }
 const styles = {
-  textstyle: {
-    fontSize: 55,
-    fontFamily: 'AppleSDGothicNeo-Light',
+  img:{
+    alignSelf:'center',
+    width:150,
+    height:150,
+    borderRadius:75,
+    marginTop:30
   },
-   textstyle2: {
-    fontSize: 25,
-   
-  },
-  titlestyle:{
-    marginTop:40,
-    marginBottom:15,
-    alignItems: 'center',
-  },
-    checkbox: {
-        marginLeft: 10,
-        flexDirection:'row'
-    }
-};
+  name:{
+    alignSelf:'center',
+    fontSize:20,
+    paddingTop:15
+  }
+}
 
 export default Today;

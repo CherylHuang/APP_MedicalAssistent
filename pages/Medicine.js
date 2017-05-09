@@ -25,12 +25,6 @@ class Medicine extends Component {
                 <Text style={text}>全部</Text>
                 <Icon name='arrow-drop-down' color='#517fa4' />
               </View>
-              <View style={[seg]}>
-                <SegmentedControlIOS tintColor="#517fa4" values={['日期', '名稱']}  selectedIndex={0}
-                marginBottom={5} marginTop={5} marginRight={5}
-                width={100}
-                />
-              </View>
           </View>
       <ScrollView>
         <List containerStyle={{marginTop: 0}}>
@@ -70,10 +64,6 @@ const styles = {
       fontSize:15,
       paddingLeft:10,
       color:'#517fa4'
-    },
-    seg:{
-      flexDirection:'column',
-      alignSelf:'center'
     },
     icon:{
       flex:1,
