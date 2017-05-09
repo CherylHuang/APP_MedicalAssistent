@@ -4,9 +4,9 @@ import { Icon, Avatar } from 'react-native-elements';
 import { Linking, ScrollView, Button, SegmentedControlIOS } from 'react-native';
 
 import Medicine from './pages/Medicine';
-import Today from './pages/Today';
+import Setting from './pages/Setting';
 import History from './pages/History';
-import Account from './pages/Account';
+import Today from './pages/Today';
 import ChangeAccount from './pages/ChangeAccount';
 import Remind from './pages/Remind';
 import MedicineDetails from './pages/MedicineDetails';
@@ -17,8 +17,8 @@ import DeleteAddIcon from './components/delete_add';
 
 export const AccountStack = StackNavigator(
 {
-  Account: {
-    screen: Account,
+  Today: {
+    screen: Today,
     navigationOptions: {
       header: ({navigate}) => ({
        left:(
@@ -151,30 +151,6 @@ export const RemindStack = StackNavigator({
   // headerMode: 'none',
 }
 );
-export const TodayStack = StackNavigator({
-  Today: {
-    screen: Today,
-    navigationOptions: {
-      header: ({navigate}) => ({
-        title: '今日藥物',
-        left:(
-          <Avatar
-          small
-          rounded
-          source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
-          containerStyle={{marginLeft: 8,marginBottom:10}}
-          onPress={() => navigate('Account')}
-          
-         />
-        ),
-      })
-    },
-  },
-},
-{
-  // headerMode: 'none',
-}
-);
 
 export const HistoryStack = StackNavigator({
   Setting: {
@@ -206,14 +182,40 @@ export const HistoryStack = StackNavigator({
   },
 });
 
+export const SettingStack = StackNavigator({
+  Setting: {
+    screen: Setting,
+    navigationOptions: {
+      header: ({navigate}) => ({
+        title: '今日藥物',
+        left:(
+          <Avatar
+          small
+          rounded
+          source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
+          containerStyle={{marginLeft: 8,marginBottom:10}}
+          onPress={() => navigate('Account')}
+          
+         />
+        ),
+      })
+    },
+  },
+},
+{
+  // headerMode: 'none',
+}
+);
+
+
 export const TabRouter = TabNavigator(
   {
     AccountStack: {
       screen: AccountStack,
       navigationOptions: {
         tabBar: {
-          label: '成員管理',
-          icon: ({ tintColor }) => <Icon name="person" size={30} color={tintColor} />
+          label: '今日藥物',
+          icon: ({ tintColor }) => <Icon name="local-drink" size={30} color={tintColor} />
         },
       },
     },
@@ -235,21 +237,21 @@ export const TabRouter = TabNavigator(
         },
       },
     },
-    TodayStack: {
-      screen: TodayStack,
-      navigationOptions: {
-        tabBar: {
-          label: '今日藥物',
-          icon: ({ tintColor }) => <Icon name="local-drink" size={30} color={tintColor} />
-        },
-      },
-    },
     HistoryStack: {
       screen: HistoryStack,
       navigationOptions: {
         tabBar: {
           label: '歷史紀錄',
           icon: ({ tintColor }) => <Icon name="assignment" size={30} color={tintColor} />
+        },
+      },
+    },
+    SettingStack: {
+      screen: SettingStack,
+      navigationOptions: {
+        tabBar: {
+          label: '設定',
+          icon: ({ tintColor }) => <Icon name="settings" size={30} color={tintColor} />
         },
       },
     },
