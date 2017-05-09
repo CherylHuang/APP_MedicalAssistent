@@ -187,17 +187,7 @@ export const SettingStack = StackNavigator({
     screen: Setting,
     navigationOptions: {
       header: ({navigate}) => ({
-        title: '今日藥物',
-        left:(
-          <Avatar
-          small
-          rounded
-          source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
-          containerStyle={{marginLeft: 8,marginBottom:10}}
-          onPress={() => navigate('Today')}
-          
-         />
-        ),
+        title: '設定',
       })
     },
   },
