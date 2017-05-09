@@ -83,7 +83,7 @@ export const MedicineStack = StackNavigator({
           rounded
           source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
           containerStyle={{marginLeft: 8,marginBottom:10}}
-          onPress={() => navigate('Account')}
+          onPress={() => navigate('Today')}
          />
         ),
       })
@@ -125,7 +125,7 @@ export const RemindStack = StackNavigator({
           rounded
           source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
           containerStyle={{marginLeft: 8,marginBottom:10}}
-          onPress={() => navigate('Account')}
+          onPress={() => navigate('Today')}
           
          />
         ),
@@ -164,7 +164,7 @@ export const HistoryStack = StackNavigator({
           rounded
           source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
           containerStyle={{marginLeft: 8,marginBottom:10}}
-          onPress={() => navigate('Account')}
+          onPress={() => navigate('Today')}
           
          />
         ),
@@ -194,7 +194,7 @@ export const SettingStack = StackNavigator({
           rounded
           source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
           containerStyle={{marginLeft: 8,marginBottom:10}}
-          onPress={() => navigate('Account')}
+          onPress={() => navigate('Today')}
           
          />
         ),
