@@ -15,7 +15,7 @@ import ClockDetails from './pages/ClockDetails';
 import DeleteAddIcon from './components/delete_add';
 
 
-export const AccountStack = StackNavigator(
+export const TodayStack = StackNavigator(
 {
   Today: {
     screen: Today,
@@ -200,8 +200,8 @@ export const SettingStack = StackNavigator({
 
 export const TabRouter = TabNavigator(
   {
-    AccountStack: {
-      screen: AccountStack,
+    TodayStack: {
+      screen: TodayStack,
       navigationOptions: {
         tabBar: {
           label: '今日藥物',
