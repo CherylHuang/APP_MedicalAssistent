@@ -51,22 +51,7 @@ export const TodayStack = StackNavigator(
   },
 }
 );
-//  export const ChangeAccountStack = StackNavigator({
-    
-//   ChangeAccount: {
-//     screen: ChangeAccount,
-//     navigationOptions: {
-//       header: ({navigate}) => ({
-//         title: '變更成員',
-//       })
-//     },
-//   },
-  
-// },
-// {
-//   // headerMode: 'none',
-// }
-// );
+
 export const MedicineStack = StackNavigator({
   Medicine: {
     screen: Medicine,
