@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { View, Image, Text } from 'react-native';
-import { List, ListItem, Icon } from 'react-native-elements';
+import { List, ListItem, Icon,Button } from 'react-native-elements';
 
 import me from '../json/me.json';
-
+import medicine from '../json/historymedicine.json';
 // Make a component
 class Today extends Component {
   state = { me: [] };
@@ -13,15 +13,34 @@ class Today extends Component {
   }
 
   render() {
-        const { img, name } = styles;
+        const { img, name,date,column,row,box } = styles;
     return (
-      <View>
-          <View>
+      <View style={{flex:1}}>
+        <View style={row}>
+
+          <View style={box}>
             <Image source={{uri: this.state.me.img}} 
             style={img}
             />
+            <View>
             <Text style={name}>{this.state.me.name}</Text>
+            </View>
           </View>
+
+          <View style={box}>
+            <Text style={date}>4/17(一)</Text>
+            <Button 
+              title='新增提醒'
+              buttonStyle={{marginRight:20}}
+              fontSize='18'
+              icon={{name: 'add'}}
+              backgroundColor='#517fa4'
+              color='white'
+              borderRadius='12'
+             />
+          </View>
+
+        </View>
 
         <List>
           <ListItem
@@ -63,17 +82,42 @@ class Today extends Component {
 }
 const styles = {
   img:{
-    alignSelf:'center',
-    width:150,
-    height:150,
-    borderRadius:75,
-    marginTop:30
+    //alignSelf:'flex-start',
+    width:120,
+    height:120,
+    borderRadius:58,
+    marginTop:30,
+    //marginLeft:10,
   },
   name:{
-    alignSelf:'center',
+    alignSelf:'flex-start',
     fontSize:20,
-    paddingTop:15
+    paddingTop:15,
+    //marginLeft:60,
+  },
+  date:{
+    fontSize:32,
+    //alignSelf:'flex-end',
+    marginTop:70,
+    marginBottom:32,
+    flexDirection:'column'
+  },
+  row:{
+    flexDirection:'row',
+    
+    justifyContent:'center',
+  },
+  column:{
+    flexDirection:'column'
+  },
+  box:{
+    flex:1,
+    flexDirection:'column',
+    marginLeft:12,
+    marginRight:12,
+    alignItems:'center'
   }
+
 }
 
 export default Today;
