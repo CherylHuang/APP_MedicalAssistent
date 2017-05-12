@@ -18,7 +18,7 @@ class Today extends Component {
       });
   }
   render() {
-        const { img, name,date,column,row,box,title,checkbox } = styles;
+        const { img, name,date,column,row,box,title,checkbox,box2 } = styles;
     return (
       <ScrollView style={{flex:1}}>
         <View style={row}>
@@ -32,10 +32,14 @@ class Today extends Component {
             </View>
           </View>
 
-          <View style={box}>
-            <Text style={date}>4/17(一)</Text>
+          <View style={[box ,box2]}>
+            <View style={{flexDirection:'row'}}>
+            <Text style={date}>4/17</Text>
+            <Text style={{fontSize:16,marginTop:48}}>(一)</Text>
+            </View>
             <Button 
               title="新增提醒"
+              large
               buttonStyle={{marginRight:20 ,borderRadius:12}}
               textStyle={{fontSize:18,color:"white"}}
               icon={{name: "add" ,size:23}}
@@ -50,41 +54,73 @@ class Today extends Component {
        
 
           <View style={{flex:1}}> 
-          <Card title='今日藥物'titleStyle={{padding:10,marginBottom:0,borderRadius:10,height:44,color:'#517fa4',fontSize:18}} containerStyle={{borderRadius:10,paddingTop:5 }}>
+          <Card title='今日藥物'titleStyle={{padding:10,marginBottom:0,borderRadius:10,height:44,color:'#517fa4',fontSize:18}} containerStyle={{borderRadius:10,paddingTop:5,backgroundColor:"#b9d0e3"}}>
           
           <Card title='8:30' titleStyle={{fontSize:18 }} containerStyle={{margin: 0,borderWidth:0,borderRadius:10}}>
-            <List style={[checkbox]}>
-             <CheckBox
-                size={30}
-                checked={this.state.isChecked}
-                color='#517fa4'
-                onPress={this.handlePressCheckedBox}
-                            
-              />       
+
+         <View style={{flexDirection:'row'}}>   
+                <View style={[checkbox]}>
+                    <CheckBox
+                    size={30}
+                    checked={this.state.isChecked}
+                    color='#517fa4'
+                    onPress={this.handlePressCheckedBox}
+                    />
+                </View>
+            <View style={{flex:1}}>             
             <ListItem
               title={this.state.medicine.name417.time830.m1}
-              titleStyle={{fontSize:18 }}
+              titleStyle={{fontSize:18}}
               hideChevron
-              //leftIcon={{name: 'check',size:25,color:"#6eb372"}}             
+              containerStyle={{marginLeft:-36}}      
             />
-            </List>
+            </View>
+        </View>
+        <View style={{flexDirection:'row'}}>   
+                <View style={[checkbox]}>
+                    <CheckBox
+                    size={30}
+                    checked={this.state.isChecked}
+                    color='#517fa4'
+                    onPress={this.handlePressCheckedBox}
+                    containerStyle={{marginBottom:10}}  //0512 沒用
+                    />
+                </View>
+            <View style={{flex:1}}>     
             <ListItem
               title={this.state.medicine.name417.time830.m2}
               titleStyle={{fontSize:18 }}
               hideChevron
-              leftIcon={{name: 'close',size:25,color:"#d95858"}}
+              containerStyle={{marginLeft:-36}}      
             />
+              </View>
+        </View>
             </Card>
+
+
             <Card title='13:00' titleStyle={{fontSize:18 }} containerStyle={{margin: 0,marginTop: 8,borderWidth:0,borderRadius:10}} >
+               <View style={{flexDirection:'row'}}>   
+                <View style={[checkbox]}>
+                    <CheckBox
+                    size={30}
+                    checked={this.state.isChecked}
+                    color='#517fa4'
+                    onPress={this.handlePressCheckedBox}
+                    />
+                </View>
+            <View style={{flex:1}}>     
               <ListItem
               title={this.state.medicine.name417.time2030.m1}
               titleStyle={{fontSize:18 }}
               hideChevron
-              leftIcon={{name: 'check',size:25,color:"#6eb372"}}
+              containerStyle={{marginLeft:-36}}      
               />
+             </View> 
+          </View>
             </Card>
           
           </Card>
+          
           </View>
       
 
@@ -112,10 +148,10 @@ const styles = {
     //marginLeft:60,
   },
   date:{
-    fontSize:32,
+    fontSize:35,
     //alignSelf:'flex-end',
-    marginTop:28,
-    marginBottom:28,
+    marginTop:30,
+    marginBottom:26,
     flexDirection:'column'
   },
   row:{
@@ -129,23 +165,27 @@ const styles = {
   box:{
     flex:1,
     flexDirection:'column',
-    marginLeft:12,
-    marginRight:12,
+    marginLeft:20,
+    marginRight:5,
     alignItems:'center',
     marginTop:28,
   },
+  box2:{
+    flex:1.2,
+    marginRight:10,
+    marginLeft:5,
+  },
   title:{
-    flexDirection:'column',
+    //flexDirection:'column',
     paddingLeft:70,
     fontsize:20,
     textAlign:'center',
     // backgroundColor:
   },
      checkbox: {
-        
         width: 50,
         marginLeft: 10,
-        
+        marginBottom:20  //0512 沒用
     },
 
 }
