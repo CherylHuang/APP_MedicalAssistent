@@ -9,11 +9,11 @@ render(){
 return (
     <View style={[right]}>
             <Icon name='delete' size={30} color="#517fa4"
-             containerStyle={{marginRight:5}}
+             containerStyle={{padding:7}}
             onPress={() => {}} 
             />
             <Icon name='add' size={30} color="#517fa4"
-             containerStyle={{marginRight:5}}
+             containerStyle={{padding:7}}
             onPress={() => {}}
             />
     </View>

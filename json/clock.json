@@ -8,13 +8,6 @@
             "school":"true",
             "work":"true"
         },
-        "SUN":"false",
-        "MON":"false",
-        "TUE":"false",
-        "WEN":"false",
-        "THU":"false",
-        "FRI":"false",
-        "SAT":"false",
         "open":"#6eb372", //open
         "delay":"ON",
         "medicine":"感冒藥",
@@ -26,7 +19,8 @@
         "amount2":"1",
         "amountWord2":"顆",
         "subeffect2":"無",
-        "img2":"http://www.healthline.com/hlcmsresource/images/slideshow/adhd-medication-for-children/285x285_ADHD_Medication_For_Children_2.jpg"
+        "img2":"http://www.healthline.com/hlcmsresource/images/slideshow/adhd-medication-for-children/285x285_ADHD_Medication_For_Children_2.jpg",
+        "isChecked":false
     },
     {
         "AMorPM":"下午",
@@ -42,20 +36,14 @@
         "amountWord":"滴",
         "subeffect":"過敏",
         "img":"http://www.watsons.com.hk/medias/sys_master/front/prd/8799320604702.jpg",
-        "SUN":"false",
-        "MON":"true",
-        "TUE":"true",
-        "WEN":"true",
-        "THU":"true",
-        "FRI":"true",
-        "SAT":"false",
         "open":"#6eb372", //open
         "delay":"OFF",
         "medicine2":"感冒藥",
         "amount2":"2",
         "amountWord2":"顆",
         "subeffect2":"嗜睡",
-        "img2":"http://img01.ibnlive.in/ibnlive/uploads/875x584/jpg/2016/12/medicines1.jpg"
+        "img2":"http://img01.ibnlive.in/ibnlive/uploads/875x584/jpg/2016/12/medicines1.jpg",
+        "isChecked":false
     },
     {
         "AMorPM":"下午",
@@ -71,19 +59,13 @@
         "amountWord":"顆",
         "subeffect":"無",
         "img":"http://www.healthline.com/hlcmsresource/images/slideshow/adhd-medication-for-children/285x285_ADHD_Medication_For_Children_2.jpg",
-        "SUN":"true",
-        "MON":"false",
-        "TUE":"false",
-        "WEN":"false",
-        "THU":"false",
-        "FRI":"false",
-        "SAT":"true",
         "open":"#868686", //close
         "delay":"ON",
         "medicine2":"眼藥",
         "amount2":"1",
         "amountWord2":"滴",
         "subeffect2":"過敏",
-        "img2":"http://www.watsons.com.hk/medias/sys_master/front/prd/8799320604702.jpg"
+        "img2":"http://www.watsons.com.hk/medias/sys_master/front/prd/8799320604702.jpg",
+        "isChecked":false
     }
 ]

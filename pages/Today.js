@@ -40,7 +40,7 @@ class Today extends Component {
             <Button 
               title="新增提醒"
               large
-              buttonStyle={{marginRight:20 ,borderRadius:12}}
+              buttonStyle={{marginRight:20 ,borderRadius:5, height:45}}
               textStyle={{fontSize:18,color:"white"}}
               icon={{name: "add" ,size:23}}
               backgroundColor='#517fa4'            
@@ -144,7 +144,7 @@ const styles = {
   name:{
     //alignSelf:'flex-start',
     fontSize:20,
-    paddingTop:15,
+    paddingTop:10,
     //marginLeft:60,
   },
   date:{
@@ -183,7 +183,7 @@ const styles = {
     // backgroundColor:
   },
      checkbox: {
-        width: 50,
+        width: 55,
         marginLeft: 10,
         marginBottom:20  //0512 沒用
     },
@@ -191,38 +191,3 @@ const styles = {
 }
 
 export default Today;
-
-
-        {/*<List>
-          <ListItem
-            //imageSrc={require('../assets/icon_alarm.png')}
-            //leftIcon={require('../assets/icon_alarm.png')}
-            key={this.state.me.name}
-            title="藥物數量"
-            titleStyle={{fontSize:20}}
-            rightTitle={this.state.me.medicine}
-            rightTitleStyle={{fontSize:20}}
-            //containerStyle={{flex: 1,height:30}}
-            leftIcon={{name: "group-work",color:'#517fa4'}}
-            hideChevron
-          />
-          <ListItem
-            key={this.state.me.alarm}
-            title="鬧鐘數量"
-            titleStyle={{fontSize:20}}
-            rightTitle={this.state.me.alarm}
-            rightTitleStyle={{fontSize:20}}
-            leftIcon={{name: "alarm",color:'#517fa4'}}
-            hideChevron
-          />
-          <ListItem
-            key={this.state.me.password}
-            title="密碼"
-            titleStyle={{fontSize:20}}
-            rightTitle={this.state.me.password}
-            rightTitleStyle={{fontSize:20}}
-            leftIcon={{name: "lock",color:'#517fa4'}}
-            hideChevron
-          />
-    
-        </List>*/}

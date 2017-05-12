@@ -13,7 +13,7 @@ class ChangeAccount extends Component {
   }
 
   goToPageTwo = (account) => {
-    this.props.navigation.navigate('Account', { ...account });
+    this.props.navigation.navigate('Today', { ...account });
   };
 
   render() {
