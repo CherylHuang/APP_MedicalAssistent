@@ -13,9 +13,9 @@ import MedicineDetails from './pages/MedicineDetails';
 import ClockDetails from './pages/ClockDetails';
 
 import DeleteAddIcon from './components/delete_add';
+import DeleteCalIcon from './components/delete_cal';
 
-
-export const TodayStack = StackNavigator(
+export const AccountStack = StackNavigator(
 {
   Today: {
     screen: Today,
@@ -51,7 +51,22 @@ export const TodayStack = StackNavigator(
   },
 }
 );
-
+//  export const ChangeAccountStack = StackNavigator({
+    
+//   ChangeAccount: {
+//     screen: ChangeAccount,
+//     navigationOptions: {
+//       header: ({navigate}) => ({
+//         title: '變更成員',
+//       })
+//     },
+//   },
+  
+// },
+// {
+//   // headerMode: 'none',
+// }
+// );
 export const MedicineStack = StackNavigator({
   Medicine: {
     screen: Medicine,
@@ -155,12 +170,7 @@ export const HistoryStack = StackNavigator({
         ),
         right:(
        
-          <Icon
-          name='date-range'
-          color = "#517fa4"
-          size={30} containerStyle={{marginRight:5}}
-          onPress={() => {}}
-          />
+       <DeleteCalIcon />
         ),
       })
     },
@@ -185,8 +195,8 @@ export const SettingStack = StackNavigator({
 
 export const TabRouter = TabNavigator(
   {
-    TodayStack: {
-      screen: TodayStack,
+    AccountStack: {
+      screen: AccountStack,
       navigationOptions: {
         tabBar: {
           label: '今日藥物',
