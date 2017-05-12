@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { ScrollView ,View } from 'react-native';
+import { ScrollView ,Text,Button,StyleSheet,View } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
+import CheckBox from 'react-native-icon-checkbox';
 
 import me from '../json/me.json';
 
@@ -14,6 +15,7 @@ class Setting extends Component {
   }
 
   render() {
+      const {checkbox, titlestyle, textstyle,textstyle2} = styles;
     return (
       <ScrollView>
         <List>
@@ -92,10 +94,28 @@ class Setting extends Component {
             leftIcon={{name: 'vpn-key',color:'#517fa4'}}
             />
         </List>
-        <View style={{marginBottom:20}}></View>
       </ScrollView>
     );
   }
 }
+const styles = {
+  textstyle: {
+    fontSize: 55,
+    fontFamily: 'AppleSDGothicNeo-Light',
+  },
+   textstyle2: {
+    fontSize: 25,
+   
+  },
+  titlestyle:{
+    marginTop:40,
+    marginBottom:15,
+    alignItems: 'center',
+  },
+    checkbox: {
+        marginLeft: 10,
+        flexDirection:'row'
+    }
+};
 
 export default Setting;

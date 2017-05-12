@@ -24,67 +24,68 @@ class History extends Component {
               </View>
           </View>
       <ScrollView>          
-      
-        <Card title='4/16(日)'titleStyle={{fontWeight:'light',padding:10,marginBottom:0,backgroundColor:"#517fa4",borderRadius:10,height:44,color:"#ffffff" ,fontSize:22}} containerStyle={{borderRadius:10 ,backgroundColor:"#b9d0e3"}}>
-         <Card title='8:30' titleStyle={{fontSize:20 }} containerStyle={{margin: 0,borderWidth:0,borderRadius:10}} >
-          <ListItem
-            title={this.state.medicine.name416.time830.m1}
-            titleStyle={{fontSize:20}}
-            hideChevron
-            leftIcon={{name: 'check',size:25,color:"#6eb372"}}
-          />
-          <ListItem
-            title={this.state.medicine.name416.time830.m2}
-            titleStyle={{fontSize:20 }}
-            hideChevron
-            leftIcon={{name: 'check',size:25,color:"#6eb372"}}
-          />
-         
-          </Card>
-          <Card title='12:50' titleStyle={{fontSize:20 }} containerStyle={{margin: 0,marginTop: 5,borderWidth:0,borderRadius:10}} >
-          <ListItem
-            title={this.state.medicine.name416.time1230.m1}
-            titleStyle={{fontSize:20 }}
-            hideChevron
-            leftIcon={{name: 'close',size:25,color:"#d95858"}}
-          />
-          </Card>
-          <Card title='20:00'titleStyle={{fontSize:16 }} containerStyle={{margin: 0,marginTop: 5,borderWidth:0,borderRadius:10}} >
-          <ListItem
-            title={this.state.medicine.name416.time2000.m1}
-            titleStyle={{fontSize:20 }}
-            hideChevron
-            leftIcon={{name: 'check',size:25,color:"#6eb372"}}
-          />
-          </Card>
-        </Card>
-
-
-  <Card title='4/17(一)'titleStyle={{fontWeight:'light',padding:10,marginBottom:0,backgroundColor:"#517fa4",borderRadius:10,height:44,color:"#ffffff" ,fontSize:22}} containerStyle={{borderRadius:10,backgroundColor:"#b9d0e3" }}>
-        <Card title='8:30' titleStyle={{fontSize:20 }} containerStyle={{margin: 0,borderWidth:0,borderRadius:10}}>
+        <Card title='4/17(一)'titleStyle={{padding:10,marginBottom:0,borderRadius:10,height:44,color:'#517fa4',fontSize:20}} containerStyle={{borderRadius:10,backgroundColor:"#b9d0e3",paddingTop:5 }}>
+        <Card title='8:30' titleStyle={{fontSize:18 }} containerStyle={{margin: 0,borderWidth:0,borderRadius:10}}>
           <ListItem
             title={this.state.medicine.name417.time830.m1}
-            titleStyle={{fontSize:20 }}
+            titleStyle={{fontSize:18 }}
             hideChevron
             leftIcon={{name: 'check',size:25,color:"#6eb372"}}
           />
            <ListItem
             title={this.state.medicine.name417.time830.m2}
-            titleStyle={{fontSize:20 }}
+            titleStyle={{fontSize:18 }}
             hideChevron
             leftIcon={{name: 'close',size:25,color:"#d95858"}}
           />
           </Card>
-          <Card title='13:00' titleStyle={{fontSize:16 }} containerStyle={{margin: 0,marginTop: 5,borderWidth:0,borderRadius:10}} >
+          <Card title='13:00' titleStyle={{fontSize:18 }} containerStyle={{margin: 0,marginTop: 5,borderWidth:0,borderRadius:10}} >
           <ListItem
             title={this.state.medicine.name417.time2030.m1}
-            titleStyle={{fontSize:20 }}
+            titleStyle={{fontSize:18 }}
             hideChevron
             leftIcon={{name: 'check',size:25,color:"#6eb372"}}
           />
          
           </Card>
         </Card>
+
+        <Card title='4/16(日)' titleStyle={{padding:10,marginBottom:0,borderRadius:10,height:44,color:'#517fa4',fontSize:20}} containerStyle={{borderRadius:10 ,backgroundColor:"#b9d0e3",paddingTop:5}}>
+         <Card title='8:30' titleStyle={{fontSize:18 }} containerStyle={{margin: 0,borderWidth:0,borderRadius:10}} >
+          <ListItem
+            title={this.state.medicine.name416.time830.m1}
+            titleStyle={{fontSize:18}}
+            hideChevron
+            leftIcon={{name: 'check',size:25,color:"#6eb372"}}
+          />
+          <ListItem
+            title={this.state.medicine.name416.time830.m2}
+            titleStyle={{fontSize:18 }}
+            hideChevron
+            leftIcon={{name: 'check',size:25,color:"#6eb372"}}
+          />
+         
+          </Card>
+          <Card title='12:50' titleStyle={{fontSize:18 }} containerStyle={{margin: 0,marginTop: 5,borderWidth:0,borderRadius:10}} >
+          <ListItem
+            title={this.state.medicine.name416.time1230.m1}
+            titleStyle={{fontSize:18 }}
+            hideChevron
+            leftIcon={{name: 'close',size:25,color:"#d95858"}}
+          />
+          </Card>
+          <Card title='20:00'titleStyle={{fontSize:18 }} containerStyle={{margin: 0,marginTop: 5,borderWidth:0,borderRadius:10}} >
+          <ListItem
+            title={this.state.medicine.name416.time2000.m1}
+            titleStyle={{fontSize:18 }}
+            hideChevron
+            leftIcon={{name: 'check',size:25,color:"#6eb372"}}
+          />
+          </Card>
+        </Card>
+
+
+  
       
         {/*<List>
           <ListItem
@@ -103,7 +104,9 @@ const styles = {
       flexDirection:'row'
     },
     container:{
-      backgroundColor:'rgba(0,0,0,0)'
+      backgroundColor:'rgba(0,0,0,0)',
+      marginTop:10,
+      marginBottom:-5,
     },
     text:{
       fontSize:15,
