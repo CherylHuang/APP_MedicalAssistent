@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { ScrollView ,Text,Button,StyleSheet,View } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
-import CheckBox from 'react-native-icon-checkbox';
 
 import me from '../json/me.json';
 
@@ -14,11 +13,15 @@ class Setting extends Component {
     this.setState({ me });
   }
 
+  goToPageAccount = (acco) => {
+    this.props.navigation.navigate('Account', { ...acco });
+  };
+
   render() {
       const {checkbox, titlestyle, textstyle,textstyle2} = styles;
     return (
       <ScrollView>
-        <List>
+        <List containerStyle={{marginTop: 0}}>
             <ListItem 
               title="我的資訊"
               titleStyle = {{color:'#929292', fontSize:15}}
@@ -29,6 +32,7 @@ class Setting extends Component {
               titleStyle = {{fontSize:18}}
               roundAvatar
               avatar={{ uri: this.state.me.img }}
+              onPress={() => this.goToPageAccount(this.state.me)}
             />
         </List>
         <List>

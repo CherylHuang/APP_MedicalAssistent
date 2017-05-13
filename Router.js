@@ -8,9 +8,11 @@ import Setting from './pages/Setting';
 import History from './pages/History';
 import Today from './pages/Today';
 import ChangeAccount from './pages/ChangeAccount';
+import Account from './pages/Account';
 import Remind from './pages/Remind';
 import MedicineDetails from './pages/MedicineDetails';
 import ClockDetails from './pages/ClockDetails';
+import EditClock from './pages/EditClock';
 
 import DeleteAddIcon from './components/delete_add';
 import DeleteCalIcon from './components/delete_cal';
@@ -51,22 +53,6 @@ export const AccountStack = StackNavigator(
   },
 }
 );
-//  export const ChangeAccountStack = StackNavigator({
-    
-//   ChangeAccount: {
-//     screen: ChangeAccount,
-//     navigationOptions: {
-//       header: ({navigate}) => ({
-//         title: '變更成員',
-//       })
-//     },
-//   },
-  
-// },
-// {
-//   // headerMode: 'none',
-// }
-// );
 export const MedicineStack = StackNavigator({
   Medicine: {
     screen: Medicine,
@@ -135,14 +121,36 @@ export const RemindStack = StackNavigator({
   ClockDetails: {
     screen: ClockDetails,
     navigationOptions: {
-      header: ({ state }) => ({
+      header: ({ state, navigate }) => ({
         tintColor:"#517fa4",
         right:(
           <Button
           title='編輯'
           color = "#517fa4"
+          onPress={() => navigate('EditClock')}
           />
         ),
+      })
+    },
+  },
+   EditClock: {
+    screen: EditClock,
+    navigationOptions: {
+      header: ({ navigate}) => ({
+        title: '編輯鬧鐘',
+        right:(
+          <Button
+          title='完成'
+          color = "#517fa4"
+          /*onPress={() => navigate('ClockDetails')}*/
+          />
+        ),
+        /*left:(
+          <Button
+          title='取消'
+          color = "#517fa4"
+          />
+        ),*/
       })
     },
   },
@@ -183,6 +191,22 @@ export const SettingStack = StackNavigator({
     navigationOptions: {
       header: ({navigate}) => ({
         title: '設定',
+      })
+    },
+  },
+   Account: {
+    screen: Account,
+    navigationOptions: {
+      header: ({state}) => ({
+        title:'我的帳戶',
+        tintColor:"#517fa4",
+       right:(
+          <Button
+          title='編輯'
+          color = "#517fa4"
+          /*onPress={() => navigate('')}*/
+          />
+        ),
       })
     },
   },
