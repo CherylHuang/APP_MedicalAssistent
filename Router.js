@@ -138,6 +138,7 @@ export const RemindStack = StackNavigator({
     navigationOptions: {
       header: ({ navigate}) => ({
         title: '編輯鬧鐘',
+        tintColor:"#517fa4",
         right:(
           <Button
           title='完成'

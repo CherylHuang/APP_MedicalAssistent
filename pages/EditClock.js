@@ -84,8 +84,6 @@ class EditClock extends Component {
               key="delay"
               title="延後提醒"
               titleStyle={{fontSize:18}}
-              rightTitle='ON'
-              rightTitleStyle={{fontSize:15}}
               hideChevron
               switchButton
               switched
