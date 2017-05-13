@@ -79,7 +79,7 @@ class Setting extends Component {
             containerStyle = {{paddingLeft:2}}
             />
         </List>
-        <List>
+        <List containerStyle={{marginBottom:20}}>
             <ListItem 
               title="密碼設定"
               titleStyle = {{color:'#929292', fontSize:15}}
