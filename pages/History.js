@@ -105,14 +105,13 @@ const styles = {
     },
     container:{
       backgroundColor:'rgba(0,0,0,0)',
-      marginTop:10,
-      marginBottom:-5,
+      paddingTop:5,
+      paddingBottom:5,
     },
     text:{
       fontSize:15,
       paddingLeft:10,
       color:'#517fa4'
-      
     },
     icon:{
       flex:1,

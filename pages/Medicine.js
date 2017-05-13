@@ -58,7 +58,9 @@ const styles = {
       flexDirection:'row'
     },
     container:{
-      backgroundColor:'white'
+      backgroundColor:'white',
+      paddingTop:5,
+      paddingBottom:5
     },
     text:{
       fontSize:15,
