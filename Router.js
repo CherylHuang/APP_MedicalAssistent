@@ -202,23 +202,18 @@ export const SettingStack = StackNavigator({
       header: ({state}) => ({
         title:'我的帳戶',
         tintColor:"#517fa4",
-       right:(
-          <Button
-          title='編輯'
-          color = "#517fa4"
-          /*onPress={() => navigate('')}*/
-          />
-        ),
-    EditPassword:{
-      screen: EditPassword,
-      navigationOptions: {
-            title: 'SETTING'
-      },
-
-    },    
       })
     },
   },
+  EditPassword: {
+    screen: EditPassword,
+    navigationOptions: {
+      header: () => ({
+        title: '密碼設定',
+        tintColor:"#517fa4",
+      })
+    },
+  }, 
 },
 {
   // headerMode: 'none',

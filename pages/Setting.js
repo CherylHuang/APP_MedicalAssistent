@@ -99,7 +99,7 @@ class Setting extends Component {
             title="密碼設定"
             titleStyle = {{fontSize:18}}
             leftIcon={{name: 'vpn-key',color:'#517fa4'}}
-            onPress={() => this.goToEditPassword}
+            onPress={this.goToEditPassword}
             />
         </List>
       </ScrollView>
