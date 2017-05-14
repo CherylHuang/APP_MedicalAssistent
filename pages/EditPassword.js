@@ -3,17 +3,18 @@ import { Text, View, Image,Alert} from 'react-native';
 import { Icon,FormInput,FormLabel,Button } from 'react-native-elements';
 //import {Password} from 'react-native-input-password';
 
-const password=null;
-const confirm=null;
+
 class EditPassword extends Component {
+
    state = {
   password:null,
   confirm:null,
-}
+};
+
 
   onSignIn=() =>{
-
-    if((password)==(confirm)){
+    const{password,confirm}=this.state;
+    if((password) === (confirm)){
        Alert.alert(
             '密碼設定成功!',
             null,
@@ -56,7 +57,7 @@ class EditPassword extends Component {
             autoCorrect={false}
             autoCapitalize='none'
             placeholder='password'
-            value={password}
+            value={this.state.password}
             maxLength={4}
             onChangeText={password => this.setState({ password })}
             
@@ -71,7 +72,7 @@ class EditPassword extends Component {
             autoCorrect={false}
             autoCapitalize='none'
             placeholder='password'
-            value={confirm}
+            value={this.state.confirm}
             maxLength={4}
             onChangeText={confirm => this.setState({ confirm })}
             
