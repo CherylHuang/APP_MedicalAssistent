@@ -16,6 +16,9 @@ class Setting extends Component {
   goToPageAccount = (acco) => {
     this.props.navigation.navigate('Account', { ...acco });
   };
+  goToEditPassword= () => {
+    this.props.navigation.navigate('EditPassword');
+  };
 
   render() {
       const {checkbox, titlestyle, textstyle,textstyle2} = styles;
@@ -96,6 +99,7 @@ class Setting extends Component {
             title="密碼設定"
             titleStyle = {{fontSize:18}}
             leftIcon={{name: 'vpn-key',color:'#517fa4'}}
+            onPress={() => this.goToEditPassword}
             />
         </List>
       </ScrollView>
