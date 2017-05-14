@@ -13,6 +13,7 @@ import Remind from './pages/Remind';
 import MedicineDetails from './pages/MedicineDetails';
 import ClockDetails from './pages/ClockDetails';
 import EditClock from './pages/EditClock';
+import EditPassword from  './pages/EditPassword';
 
 import DeleteAddIcon from './components/delete_add';
 import DeleteCalIcon from './components/delete_cal';
@@ -208,6 +209,13 @@ export const SettingStack = StackNavigator({
           /*onPress={() => navigate('')}*/
           />
         ),
+    EditPassword:{
+      screen: EditPassword,
+      navigationOptions: {
+            title: 'SETTING'
+      },
+
+    },    
       })
     },
   },
