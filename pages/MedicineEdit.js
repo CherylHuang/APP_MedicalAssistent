@@ -13,13 +13,19 @@ class MedicineEdit extends Component {
   }
 
   render() {
-        const { img } = styles;
+        const { flex, img, icon, icon_pos } = styles;
     return (
       <ScrollView>
-          <View>
+          <View style={flex}>
             <Image source={{uri: 'http://img01.ibnlive.in/ibnlive/uploads/875x584/jpg/2016/12/medicines1.jpg'}} 
             style={img}
             />
+            <View style={icon_pos}>
+                <Icon name='photo-camera' color='white'
+                underlayColor='#b9d0e3' size={25}
+                containerStyle={icon}
+                onPress={()=>{}} />
+            </View>
           </View>
 
         <List>
@@ -31,8 +37,6 @@ class MedicineEdit extends Component {
                 <Icon name='edit' color='#517fa4' onPress={()=>{}} />
             </View>
                 }
-            /*rightTitle={'感冒藥'}
-            rightTitleStyle={{fontSize:17}}*/
             hideChevron
           />
           <ListItem
@@ -82,13 +86,27 @@ class MedicineEdit extends Component {
   }
 }
 const styles = {
+  flex:{
+    flex:1
+  },
+  icon_pos:{
+    alignSelf:'center',
+    width:130
+  },
   img:{
     alignSelf:'center',
     width:150,
     height:150,
     borderRadius:75,
-    marginTop:30,
-    marginBottom:20
+    marginTop:30
+  },
+  icon:{
+    alignSelf:'flex-end',
+    marginTop:-45,
+    backgroundColor:'#517fa4',
+    width:40,
+    height:40,
+    borderRadius:20
   }
 }
 
