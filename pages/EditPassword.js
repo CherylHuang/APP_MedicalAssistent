@@ -13,6 +13,7 @@ class EditPassword extends Component {
 
 
   onSignIn=() =>{
+
     const{password,confirm}=this.state;
     if((password) === (confirm)){
        Alert.alert(
@@ -41,7 +42,9 @@ class EditPassword extends Component {
     }
   }
 
-
+ changeValue(value) {
+    this.setState(Object.assign({}, this.state, { value }));
+  }
  
   render() {
     const { state,psaaword } = styles;
@@ -59,8 +62,10 @@ class EditPassword extends Component {
             placeholder='password'
             value={this.state.password}
             maxLength={4}
+            keyboardType='numeric'
             onChangeText={password => this.setState({ password })}
-            
+            clearTextOnFocus='true'
+            onClear={() => this.changeValue('')}
           />
           </View>
           <FormLabel >確認密碼</FormLabel>
@@ -74,6 +79,8 @@ class EditPassword extends Component {
             placeholder='password'
             value={this.state.confirm}
             maxLength={4}
+            keyboardType='numeric'
+            clearTextOnFocus='true'
             onChangeText={confirm => this.setState({ confirm })}
             
           />
