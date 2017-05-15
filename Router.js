@@ -16,6 +16,7 @@ import Remind from './pages/Remind';
 import ClockDetails from './pages/ClockDetails';
 import EditClock from './pages/EditClock';
 import TimeTable from './pages/TimeTable';
+import TimeTableEdit from './pages/TimeTableEdit';
 
 import LoginScreen from './screens/LoginScreen';
 import NewUserScreen from './screens/NewUserScreen';
@@ -187,9 +188,31 @@ export const RemindStack = StackNavigator({
           <Button
           title='編輯'
           color = "#517fa4"
-          /*onPress={() => navigate('EditTable')}*/
+          onPress={() => navigate('TimeTableEdit')}
           />
         ),
+      })
+    },
+  },
+  TimeTableEdit: {
+    screen: TimeTableEdit,
+    navigationOptions: {
+      header: ({navigate}) => ({
+        title: '編輯時刻表',
+        tintColor:"#517fa4",
+        right:(
+          <Button
+          title='完成'
+          color = "#517fa4"
+          /*onPress={() => navigate('ClockDetails')}*/
+          />
+        ),
+        /*left:(
+          <Button
+          title='取消'
+          color = "#517fa4"
+          />
+        ),*/
       })
     },
   },
