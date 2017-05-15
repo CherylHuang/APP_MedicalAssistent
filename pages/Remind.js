@@ -18,8 +18,11 @@ class Reminder extends Component {
     this.setState({ clock, timetable });
   }
 
-  goToPageTwo = (ck) => {
+  goToPageClock = (ck) => {
     this.props.navigation.navigate('ClockDetails', { ...ck });
+  };
+  goToPageTable = () => {
+    this.props.navigation.navigate('TimeTable');
   };
 
 // checkbox
@@ -62,6 +65,7 @@ renderListView = (val) => {
                   containerStyle={{paddingLeft:40}}
                   title={tt.title} titleStyle={{fontSize:18, margin:2.5}}
                   subtitle={tt.tag} subtitleStyle={{fontSize:14, margin:2.5}}
+                  onPress={this.goToPageTable}
                 />
              </View>
           ))}
@@ -85,7 +89,7 @@ renderListView = (val) => {
                 </View>
 
                 <TouchableHighlight style={{flex:1}}
-                onPress={() => this.goToPageTwo(ck)}>
+                onPress={() => this.goToPageClock(ck)}>
 
                   <View style={[clockContain, directionRow, alignItemCenter]}>
 

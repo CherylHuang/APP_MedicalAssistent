@@ -11,18 +11,22 @@ const Confirm = ({ title, visible, onAccept, onDecline }) => {
          animationType="slide"
          onRequestClose={() => { }}
       >
-         <View style={styles.containerStyle}>
-            <Card title={title}>
+         <View style={styles.containerStyle} titleStyl={{fontSize:15}}>
+            <Card title={title} containerStyle={{borderRadius:5}}>
                <View style={{ flexDirection: 'row' }}>
                   <Button
                      style={{ flex: 1 }}
-                     title='Yes'
-                     backgroundColor='#7BD500'
+                     title='是'
+                     borderRadius={5}
+                     fontSize={18}
+                     backgroundColor='#75cb00'
                      onPress={onAccept}
                   />
                   <Button
                      style={{ flex: 1 }}
-                     title='No'
+                     title='否'
+                     borderRadius={5}
+                     fontSize={18}
                      backgroundColor='#D10036'
                      onPress={onDecline}
                   />

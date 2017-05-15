@@ -1,22 +1,50 @@
 import React, { Component } from 'react';
-import { ScrollView,Text,Button, View, SegmentedControlIOS } from 'react-native';
+import { ScrollView,Text,Button, View, SegmentedControlIOS, Image } from 'react-native';
 import { List, ListItem,Card, Icon } from 'react-native-elements';
 
 import medicine from '../json/historymedicine.json';
 
+
 // Make a component
 class History extends Component {
-  state = { medicine: [] };
+  state = { 
+    medicine: [],
+    calMode: true
+   };
+
+  // constructor (props) {
+  //   super(props)
+  //   this.state = {
+  //     calMode: new delete_cel_icon()
+  //   };
+  // }
+
+  // CallGetValue(){
+  //       this.state.delete_cel_icon.getValue();
+  // }
+
+  // setCalMode = (cal) => {
+  //   this.setState({
+  //     calMode: cal
+  //   })
+  // }
+
 
   componentWillMount() {
     this.setState({ medicine });
   }
-  
 
-  render() {
-  const { container, direction, text, seg, icon } = styles;
-  return (
-    <View style={{flex:1}}>
+  renderView(mode) {
+    const { container, direction, text, seg, icon, calendar } = styles;
+
+    if (mode) {
+      return (
+        <Image source={require('../assets/historyTable2.jpg')} style={calendar} />
+      );
+    }
+
+    return (
+      <View style={{flex:1}}>
           <View style={[container, direction]}>
               <View style={[direction, icon]}>
                 <Text style={text}>全部</Text>
@@ -84,20 +112,18 @@ class History extends Component {
           </Card>
         </Card>
 
-
-  
-      
-        {/*<List>
-          <ListItem
-            title="Sign Out"
-            rightIcon={{ name: 'cancel' }}
-          />
-        </List>*/}
       </ScrollView>
     </View>
+    );
+  }
+
+render() {
+  return (
+      this.renderView(this.state.calMode)
   );
 };
 }
+
 
 const styles = {
     direction:{
@@ -116,6 +142,11 @@ const styles = {
     icon:{
       flex:1,
       alignItems:'center'
+    },
+    calendar:{
+      // height:300,
+      flex:1,
+      width:null
     }
 };
 

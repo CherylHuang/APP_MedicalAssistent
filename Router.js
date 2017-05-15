@@ -4,16 +4,21 @@ import { Icon, Avatar } from 'react-native-elements';
 import { Linking, ScrollView, Button, SegmentedControlIOS } from 'react-native';
 
 import Medicine from './pages/Medicine';
+import MedicineDetails from './pages/MedicineDetails';
+import MedicineEdit from './pages/MedicineEdit';
 import Setting from './pages/Setting';
+import EditPassword from  './pages/EditPassword';
 import History from './pages/History';
 import Today from './pages/Today';
 import ChangeAccount from './pages/ChangeAccount';
 import Account from './pages/Account';
 import Remind from './pages/Remind';
-import MedicineDetails from './pages/MedicineDetails';
 import ClockDetails from './pages/ClockDetails';
 import EditClock from './pages/EditClock';
-import EditPassword from  './pages/EditPassword';
+import TimeTable from './pages/TimeTable';
+
+import LoginScreen from './screens/LoginScreen';
+import NewUserScreen from './screens/NewUserScreen';
 
 import DeleteAddIcon from './components/delete_add';
 import DeleteCalIcon from './components/delete_cal';
@@ -79,12 +84,29 @@ export const MedicineStack = StackNavigator({
   MedicineDetails: {
     screen: MedicineDetails,
     navigationOptions: {
-      header: ({ state }) => ({
+      header: ({ state, navigate }) => ({
         tintColor:"#517fa4",
         right:(
           <Button
           title='編輯'
           color = "#517fa4"
+          onPress={() => navigate('MedicineEdit')}
+          />
+        ),
+      })
+    },
+  },
+  MedicineEdit: {
+    screen: MedicineEdit,
+    navigationOptions: {
+      header: ({ state }) => ({
+        title: '編輯藥物',
+        tintColor:"#517fa4",
+        right:(
+          <Button
+          title='完成'
+          color = "#517fa4"
+          /*onPress={() => navigate('EditClock')}*/
           />
         ),
       })
@@ -137,7 +159,7 @@ export const RemindStack = StackNavigator({
    EditClock: {
     screen: EditClock,
     navigationOptions: {
-      header: ({ navigate}) => ({
+      header: ({navigate}) => ({
         title: '編輯鬧鐘',
         tintColor:"#517fa4",
         right:(
@@ -153,6 +175,21 @@ export const RemindStack = StackNavigator({
           color = "#517fa4"
           />
         ),*/
+      })
+    },
+  },
+  TimeTable: {
+    screen: TimeTable,
+    navigationOptions: {
+      header: ({ navigate }) => ({
+        tintColor:"#517fa4",
+        right:(
+          <Button
+          title='編輯'
+          color = "#517fa4"
+          /*onPress={() => navigate('EditTable')}*/
+          />
+        ),
       })
     },
   },
@@ -179,7 +216,6 @@ export const HistoryStack = StackNavigator({
          />
         ),
         right:(
-       
        <DeleteCalIcon />
         ),
       })
@@ -273,7 +309,17 @@ export const TabRouter = TabNavigator(
     animationEnabled: 'true',
     tabBarOptions:{
       activeTintColor:'#ffffff',
-      activeBackgroundColor:'#517fa4'
+      activeBackgroundColor:'#517fa4',
+      headerMode: 'screen',
     }
+  }
+);
+
+export const LoginStack = StackNavigator({
+    LoginScreen: {screen: LoginScreen},
+    NewUserScreen: {screen: NewUserScreen}
+  },
+  {
+    headerMode: 'none',
   }
 );

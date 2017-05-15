@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image, Text ,ScrollView } from 'react-native';
+import { View, Image, Text ,ScrollView, StatusBar } from 'react-native';
 import { List, ListItem, Icon,Button,Card } from 'react-native-elements';
 import CheckBox from 'react-native-icon-checkbox';
 import me from '../json/me.json';
@@ -21,6 +21,7 @@ class Today extends Component {
         const { img, name,date,column,row,box,title,checkbox,box2 } = styles;
     return (
       <ScrollView style={{flex:1}}>
+        <StatusBar hidden={false} />
         <View style={row}>
 
           <View style={box}>

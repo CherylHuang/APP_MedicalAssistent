@@ -93,6 +93,7 @@ class Setting extends Component {
             titleStyle = {{fontSize:18}}
             hideChevron
             switchButton
+            switched
             leftIcon={{name: 'lock',color:'#517fa4'}}
             />
             <ListItem 

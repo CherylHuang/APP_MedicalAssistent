@@ -13,7 +13,6 @@ class EditPassword extends Component {
 
 
   onSignIn=() =>{
-
     const{password,confirm}=this.state;
     if((password) === (confirm)){
        Alert.alert(
@@ -42,9 +41,7 @@ class EditPassword extends Component {
     }
   }
 
- changeValue(value) {
-    this.setState(Object.assign({}, this.state, { value }));
-  }
+
  
   render() {
     const { state,psaaword } = styles;
@@ -54,7 +51,7 @@ class EditPassword extends Component {
           <FormLabel >請輸入4位密碼</FormLabel>
           <View style={{flexDirection:'row'}}>  
           <FormInput
-            containerStyle={{flex:1,width:200,height:50,backgroundColor:'white'}}
+            containerStyle={{flex:1,width:200,height:40,backgroundColor:'white'}}
             inputStyle={{fontSize:30}}
             secureTextEntry
             autoCorrect={false}
@@ -63,15 +60,15 @@ class EditPassword extends Component {
             value={this.state.password}
             maxLength={4}
             keyboardType='numeric'
-            onChangeText={password => this.setState({ password })}
             clearTextOnFocus='true'
-            onClear={() => this.changeValue('')}
+            onChangeText={password => this.setState({ password })}
+            
           />
           </View>
           <FormLabel >確認密碼</FormLabel>
           <View style={{flexDirection:'row'}}>
           <FormInput
-            containerStyle={{flex:1,height:50,backgroundColor:'white'}}
+            containerStyle={{flex:1,height:40,backgroundColor:'white'}}
             inputStyle={{fontSize:30}}
             secureTextEntry
             autoCorrect={false}
@@ -79,14 +76,13 @@ class EditPassword extends Component {
             placeholder='password'
             value={this.state.confirm}
             maxLength={4}
+            onChangeText={confirm => this.setState({ confirm })}
             keyboardType='numeric'
             clearTextOnFocus='true'
-            onChangeText={confirm => this.setState({ confirm })}
-            
           />
           </View>
           <Button
-          title='Sign in'
+          title='確認'
           backgroundColor='#4AAF4C'
           onPress={this.onSignIn}
           buttonStyle={{marginTop:50,borderRadius:5}}
