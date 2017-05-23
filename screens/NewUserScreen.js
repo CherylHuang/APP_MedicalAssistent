@@ -23,7 +23,7 @@ class NewUserScreen extends Component {
       let dbUserid = firebase.database().ref(`/users/${currentUser.uid}`);
       await dbUserid.set({ email });
 
-      // this.props.navigation.navigate('AccountStack');
+      this.props.navigation.navigate('TabRouter');
       this.setState({ saving: false });
     } catch (err) {
       this.setState({

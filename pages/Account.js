@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Image, Text, ScrollView } from 'react-native';
 import { List, ListItem, Icon } from 'react-native-elements';
+import * as firebase from 'firebase';
 
 import me from '../json/me.json';
 
@@ -10,6 +11,11 @@ class Account extends Component {
 
   componentWillMount() {
     this.setState({ me });
+  }
+
+  onSignOut = () => {
+    firebase.auth().signOut();
+    this.props.navigation.navigate('LoginScreen');
   }
 
   render() {
@@ -67,6 +73,7 @@ class Account extends Component {
             leftIcon={{type:'simple-line-icon', name: 'logout',color:'red'}}
             hideChevron
             rightTitleContainerStyle = {{flex:0}}
+            onPress={this.onSignOut}
           />
         </List>
        

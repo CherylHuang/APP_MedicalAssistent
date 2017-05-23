@@ -24,7 +24,7 @@ class LoginScreen extends Component {
     this.setState({ error: ' ', loading: true });
     try {
       await firebase.auth().signInWithEmailAndPassword(email, password);
-      // this.props.navigation.navigate('AccountStack');
+      this.props.navigation.navigate('TabRouter');
     } catch (err) {
       this.setState({ showModal: true });
     }
@@ -121,7 +121,7 @@ doGoogleLogin = async () => {
       await firebase.auth().signInWithCredential(credential);
       const { currentUser } = await firebase.auth();
       console.log(`currentUser = ${currentUser.uid}`);
-      // this.props.navigation.navigate('AccountStack');
+      // this.props.navigation.navigate('TabRouter');
     } catch (err) {
 
     }
@@ -174,7 +174,7 @@ doGoogleLogin = async () => {
 //       await firebase.auth().signInWithCredential(credential);
 //       const { currentUser } = await firebase.auth();
 //       console.log(`currentUser = ${currentUser.uid}`);
-//       this.props.navigation.navigate('AccountStack');
+//       this.props.navigation.navigate('TabRouter');
 //     } catch (err) {
 
 //     }
